@@ -1,0 +1,31 @@
+.NavBar ul{
+    margin-top: 10px;
+    display: flex;
+    float: right;
+    text-decoration: none;
+}
+.NavBar li {
+    padding: 0px 50px 0px 0px;
+    list-style-type:none;
+    display: inline;
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+.NavBar a {
+    text-decoration:none;
+    color: rgb(122, 122, 122)
+}
+.NavBar a:hover {
+    text-decoration:none;
+    color: rgb(73, 73, 73)
+}
+@keyframes slidein {
+    from {
+        opacity: 0%;
+        transform: translateX(+100%);
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0%);
+    }
+}
