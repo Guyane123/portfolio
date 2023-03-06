@@ -9,17 +9,80 @@
     list-style-type:none;
     display: inline;
     animation-duration: 2s;
-    animation-name: slidein;
+    animation-name: slideinright;
 }
-.NavBar a {
+.NavBar a, .Responsive-NavBar a{
     text-decoration:none;
-    color: rgb(122, 122, 122)
+    color: white;
+}
+.NavBar a:hover {
+    position: relative;
+    border: 1px white solid;
+    border-radius: 5px;
+}
+.Responsive-NavBar a{
+    padding: 50px;
+    display: flex;
+    color: black;
+
+}
+.Responsive-NavBar {
+    width: 100%;
+    background-color: black;
+    height: 40px;
+    position: fixed;
+    z-index: 10;
+}
+.Responsive-NavBar li{
+    list-style-type: none;
+}
+.Responsive-NavBar ul {
+    display: flex;
+    flex-direction: column;
 }
 .NavBar a:hover {
     text-decoration:none;
     color: rgb(73, 73, 73)
 }
-@keyframes slidein {
+.hidden {
+    display: none;
+}
+.burger {
+    animation-duration: 1s;
+    animation-name: slideinright2;
+    animation-name: pulse;
+    animation-duration: 1s;
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 5px;
+    height: 30px;
+    width: 30px;
+    border-radius: 10px;
+    background-color: rgb(255, 255, 255);
+}
+.burger h2 {
+    position: absolute;
+    font-size: 12px;
+    top: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.burger, #content-container {
+    position: fixed;
+}
+#content-container {
+    animation: slideinleft;
+    animation-duration: 1s;
+    width: 65vw;
+    height: 100vh;
+    border: black 2px solid;
+    margin-left: -12px;
+    margin-top: 35px;
+    border-top: 0px;
+    background-color: white;
+    z-index: -9999;
+}
+@keyframes slideinright {
     from {
         opacity: 0%;
         transform: translateX(+100%);
@@ -27,5 +90,31 @@
     to {
         opacity: 100%;
         transform: translateX(0%);
+    }
+}
+@keyframes slideinright2 {
+    from {
+        opacity: 0%;
+        transform: translateX(+500%);
+    }
+    to {
+        opacity: 100%;
+        transform: translateX(0%);
+    }
+}
+@keyframes slideinleft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+@keyframes pulse{
+    from {
+        border: 4px solid rgba(255, 255, 255, 0.1);
+    }
+    to {
+        border: 2px solid rgb(255, 255, 255, 1);
     }
 }

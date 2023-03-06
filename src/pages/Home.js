@@ -1,13 +1,16 @@
 import React from "react";
-import "./styles/Home.css";
+import "../styles/Home.css";
+import Moi from "../Moi";
 
-const About = () => {
+const Home = () => {
     return (
         <div className="Home modules">
             <ul>
                 <li>
                     <div className="pfp pfp1"></div>
-                    <div className="message message1">Hello !👋</div>
+                    <div className="message message1">
+                        Hello !<span id="hand">👋</span>
+                    </div>
                 </li>
                 <li>
                     <div className="pfp pfp2"></div>
@@ -24,8 +27,9 @@ const About = () => {
                     </div>
                 </li>
             </ul>
+            <Moi />
         </div>
     );
 };
 
-export default About;
+export default Home;
