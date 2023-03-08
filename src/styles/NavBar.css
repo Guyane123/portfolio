@@ -35,6 +35,7 @@
 }
 .Responsive-NavBar li{
     list-style-type: none;
+    padding-top: 100px;
 }
 .Responsive-NavBar ul {
     display: flex;
@@ -66,9 +67,6 @@
     top: 25%;
     left: 50%;
     transform: translateX(-50%);
-}
-.burger, #content-container {
-    position: fixed;
 }
 #content-container {
     animation: slideinleft;

@@ -6,7 +6,7 @@
     margin-top: 100px;
 }
 @media (min-width: 1080px) {
-    .Home {
+    .Home, .Biographie {
         display: flex;
         justify-content: space-around;
     }
@@ -109,6 +109,16 @@
         visibility: visible;
     }
 }
+@keyframes slideinbottom {
+    from {
+        transform: translateY(+100%);
+        opacity: 0%;
+    }to {
+        transform: translateX(0%);
+        opacity: 100%;
+        visibility: visible;
+    }
+}
 @keyframes salut {
     10% {
         transform: rotate(0deg);
@@ -141,7 +151,21 @@
         transform: rotate(-8deg);
     }
 }
+.Biographie {
+    margin-top: 75px;
+    visibility: hidden;
+    border-radius: 5px;
+    border: rgb(219, 219, 219) solid 2px;
+    display: flex;
+    justify-content: space-around;
+    animation: slideinbottom 1s forwards;
+    animation-delay: 4s;
 
+}
+.Biographie img {
+    width: 20vw;
+    padding-right: 50px;
+}
 .Moi h2 {
     visibility: hidden;
     padding-bottom: 25px;
@@ -154,5 +178,19 @@
 @media (max-width: 480px) {
     .message {
       font-size: 20px;
+    }
+    .Biographie {
+        margin-left: 0px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .Biographie img {
+        margin-bottom: 75px;
+        position: relative;
+        padding-right: 0px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 75vw;
     }
   }
