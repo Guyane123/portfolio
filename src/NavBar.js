@@ -16,6 +16,9 @@ const NavBar = () => {
             document.getElementById("burgerID").innerHTML = "close";
         }
     }
+    function changeColor() {
+        console.log("d");
+    }
     if (w > 800) {
         return (
             <div id="navbarID" className="NavBar">
@@ -31,6 +34,9 @@ const NavBar = () => {
                     </li>
                     <li>
                         <Link to="/skills">Compétences</Link>
+                    </li>
+                    <li>
+                        <button onClick={() => changeColor()}>N</button>
                     </li>
                 </ul>
             </div>

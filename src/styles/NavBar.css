@@ -1,118 +1,124 @@
-.NavBar ul{
-    margin-top: 10px;
-    display: flex;
-    float: right;
-    text-decoration: none;
+.NavBar ul {
+  margin-top: 10px;
+  display: flex;
+  float: right;
+  text-decoration: none;
 }
-.NavBar li {
-    padding: 0px 50px 0px 0px;
-    list-style-type:none;
-    display: inline;
-    animation-duration: 2s;
-    animation-name: slideinright;
+.NavBar ul li {
+  padding: 0px 50px 0px 0px;
+  list-style-type: none;
+  display: inline;
+  animation-duration: 2s;
+  animation-name: slideinright;
 }
-.NavBar a, .Responsive-NavBar a{
-    text-decoration:none;
-    color: white;
+.NavBar ul a:hover {
+  position: relative;
+  border: 1px white solid;
+  border-radius: 5px;
 }
-.NavBar a:hover {
-    position: relative;
-    border: 1px white solid;
-    border-radius: 5px;
+.NavBar ul a {
+  text-decoration: none;
+  color: white;
 }
-.Responsive-NavBar a{
-    padding: 50px;
-    display: flex;
-    color: black;
 
-}
 .Responsive-NavBar {
-    width: 100%;
-    background-color: black;
-    height: 40px;
-    position: fixed;
-    z-index: 10;
+  width: 100%;
+  background-color: black;
+  height: 40px;
+  position: fixed;
+  z-index: 10;
 }
-.Responsive-NavBar li{
-    list-style-type: none;
-    padding-top: 100px;
+.Responsive-NavBar a {
+  text-decoration: none;
+  color: white;
+  padding: 50px;
+  display: flex;
+  color: black;
+}
+.Responsive-NavBar li {
+  list-style-type: none;
+  padding-top: 100px;
 }
 .Responsive-NavBar ul {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
-.NavBar a:hover {
-    text-decoration:none;
-    color: rgb(73, 73, 73)
+.Responsive-NavBar a:hover {
+  text-decoration: none;
+  color: rgb(73, 73, 73);
 }
+
 .hidden {
-    display: none;
+  display: none;
 }
+
 .burger {
-    animation-duration: 1s;
-    animation-name: slideinright2;
-    animation-name: pulse;
-    animation-duration: 1s;
-    position: absolute;
-    margin-left: 10px;
-    margin-top: 5px;
-    height: 30px;
-    width: 30px;
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);
+  animation-duration: 1s;
+  animation-name: slideinright2;
+  animation-name: pulse;
+  animation-duration: 1s;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 5px;
+  height: 30px;
+  width: 30px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255);
 }
 .burger h2 {
-    position: absolute;
-    font-size: 12px;
-    top: 25%;
-    left: 50%;
-    transform: translateX(-50%);
+  position: absolute;
+  font-size: 12px;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
 }
+
 #content-container {
-    animation: slideinleft;
-    animation-duration: 1s;
-    width: 65vw;
-    height: 100vh;
-    border: black 2px solid;
-    margin-left: -12px;
-    margin-top: 35px;
-    border-top: 0px;
-    background-color: white;
-    z-index: -9999;
+  animation: slideinleft;
+  animation-duration: 1s;
+  width: 65vw;
+  height: 100vh;
+  border: black 2px solid;
+  margin-left: -12px;
+  margin-top: 35px;
+  border-top: 0px;
+  background-color: white;
+  z-index: -9999;
 }
+
 @keyframes slideinright {
-    from {
-        opacity: 0%;
-        transform: translateX(+100%);
-    }
-    to {
-        opacity: 100%;
-        transform: translateX(0%);
-    }
+  from {
+    opacity: 0%;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
 }
 @keyframes slideinright2 {
-    from {
-        opacity: 0%;
-        transform: translateX(+500%);
-    }
-    to {
-        opacity: 100%;
-        transform: translateX(0%);
-    }
+  from {
+    opacity: 0%;
+    transform: translateX(500%);
+  }
+  to {
+    opacity: 100%;
+    transform: translateX(0%);
+  }
 }
 @keyframes slideinleft {
-    from {
-        transform: translateX(-100%);
-    }
-    to {
-        transform: translateX(0%);
-    }
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
-@keyframes pulse{
-    from {
-        border: 4px solid rgba(255, 255, 255, 0.1);
-    }
-    to {
-        border: 2px solid rgb(255, 255, 255, 1);
-    }
-}
+@keyframes pulse {
+  from {
+    border: 4px solid rgba(255, 255, 255, 0.1);
+  }
+  to {
+    border: 2px solid rgb(255, 255, 255);
+  }
+}/*# sourceMappingURL=NavBar.css.map */

@@ -1,0 +1,192 @@
+
+.Home {
+    ul {
+        list-style-type: none;
+        margin-left: -40px;
+    }
+    li {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: stretch;
+    
+    }
+    .message {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        padding: 10px 40px 10px 40px;
+        background-color: rgb(239, 239, 239);
+        border-radius: 50px;
+        font-size: 2em;
+        visibility: hidden
+    }
+    .message1 {
+        visibility: visible;
+    }
+    #hand {
+        z-index: 0;
+        animation-name: salut;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+    .message2 {
+        animation-name: message;
+        animation-duration: 1s;
+        animation-delay: 0.50s;
+        animation-fill-mode: forwards;
+    }
+    .message3 {
+        animation-name: message;
+        animation-duration: 1s;
+        animation-delay: 1.30s;
+        animation-fill-mode: forwards;
+    }
+    .message4 {
+        animation-name: message;
+        animation-duration: 1s;
+        animation-delay: 2.10s;
+        animation-fill-mode: forwards;
+    }
+    .pfp {
+        z-index: -2;
+        margin-right: 20px;
+        height: 50px;
+        width: 50px;
+        background-image: url('https://cdn.discordapp.com/attachments/635919509932343336/1082042645632786583/image.png');
+        background-position: center;
+        border-radius: 50px;
+        transform: translateY(+25%);
+        visibility: hidden;
+    }
+    .pfp1 {
+        visibility: visible;
+    }
+    .pfp2 {
+        animation-name: message;
+        animation-duration: 0.1s;
+        animation-delay: 0.50s;
+        animation-fill-mode: forwards;
+    }
+    .pfp3 {
+        animation-name: message;
+        animation-duration: 0.1s;
+        animation-delay: 1.30s;
+        animation-fill-mode: forwards;
+    }
+    .pfp4 {
+        animation-name: message;
+        animation-duration: 0.1s;
+        animation-delay: 2.1s;
+        animation-fill-mode: forwards;
+    }
+}
+.Biographie {
+    .container {
+        grid-template-columns: 8ch auto;
+        width: 10%;
+        background-color: black;
+    }
+}
+.Moi {
+    margin-top: 100px;
+    h2 {
+        visibility: hidden;
+        padding-bottom: 25px;
+        text-align: justify;
+        animation-delay: 2.1s;
+        animation-name: slidein;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+}
+@media (min-width: 1080px) {
+    .Home, .Biographie {
+        display: flex;
+        justify-content: space-around;
+    }
+    .Moi {
+        margin-top: 0px;
+    }
+}
+
+@keyframes message {
+    from {
+        visibility: hidden;
+    }
+    to {
+        visibility: visible;
+    }
+}
+@keyframes slidein {
+    from {
+        transform: translateX(+100%);
+    }to {
+        transform: translateX(0%);
+        visibility: visible;
+    }
+}
+@keyframes slideinbottom {
+    from {
+        transform: translateY(+100%);
+        opacity: 0%;
+    }to {
+        transform: translateX(0%);
+        opacity: 100%;
+        visibility: visible;
+    }
+}
+@keyframes salut {
+    10% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(-8deg);
+    }
+    30% {
+        transform: rotate(14deg);
+    }
+    40% {
+        transform: rotate(-8deg);
+    }
+    50% {
+        transform: rotate(14deg);
+    }
+    60% {
+        transform: rotate(-8deg);
+    }
+    70% {
+        transform: rotate(14deg);
+    }
+    80% {
+        transform: rotate(-8deg);
+    }
+    90% {
+        transform: rotate(14deg);
+    }
+    100% {
+        transform: rotate(-8deg);
+    }
+}
+@media (max-width: 480px) {
+    .message {
+      font-size: 20px;
+    }
+    .Biographie {
+        margin-left: 0px;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        img {
+            margin-bottom: 75px;
+            position: relative;
+            padding-right: 0px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 75vw;
+        }
+    }
+  }
