@@ -10,23 +10,25 @@ const Home = () => {
                 <ul>
                     <li>
                         <div className="pfp pfp1"></div>
-                        <div className="message message1">
+                        <div className="message blackMessage message1">
                             Hello !<span id="hand">👋</span>
                         </div>
                     </li>
                     <li>
                         <div className="pfp pfp2"></div>
-                        <div className="message message2">
+                        <div className="message blackMessage message2">
                             Je m'appelle Damien.
                         </div>
                     </li>
                     <li>
                         <div className="pfp pfp3"></div>
-                        <div className="message message3">J'ai 14 ans.</div>
+                        <div className="message blackMessage message3">
+                            J'ai 14 ans.
+                        </div>
                     </li>
                     <li>
                         <div className="pfp pfp4"></div>
-                        <div className="message message4">
+                        <div className="message blackMessage message4">
                             J'aimerais être un dév.
                         </div>
                     </li>

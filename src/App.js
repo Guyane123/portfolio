@@ -3,6 +3,8 @@ import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Compétences from "./pages/Compétences";
+import Footer from "./Footer";
+import GoUp from "./GoUp";
 
 function App() {
     return (
@@ -13,6 +15,8 @@ function App() {
                 <Route path="about" element={<About />} />
                 <Route path="skills" element={<Compétences />} />
             </Routes>
+            <GoUp />
+            <Footer />
         </div>
     );
 }

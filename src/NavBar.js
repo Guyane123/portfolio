@@ -17,7 +17,17 @@ const NavBar = () => {
         }
     }
     function changeColor() {
-        console.log("d");
+        document.getElementById("sun").classList.toggle("sun");
+        document.getElementById("sun").classList.toggle("moon");
+        document.getElementById("goUp").classList.toggle("blackGoUp");
+        document
+            .getElementById("colorContainer")
+            .classList.toggle("blackColorContainer");
+        document.body.classList.toggle("blackMode");
+        const message = document.querySelectorAll(".message");
+        message.forEach((element) => {
+            element.classList.toggle("blackMessage");
+        });
     }
     if (w > 800) {
         return (
@@ -36,14 +46,24 @@ const NavBar = () => {
                         <Link to="/skills">Compétences</Link>
                     </li>
                     <li>
-                        <button onClick={() => changeColor()}>N</button>
+                        <div
+                            id="colorContainer"
+                            onClick={() => changeColor()}
+                            className="colorContainer"
+                        >
+                            <div id="sun" className="sun"></div>
+                        </div>
                     </li>
                 </ul>
             </div>
         );
     } else {
         return (
-            <div id="navbarID" className="Responsive-NavBar">
+            <div
+                id="navbarID"
+                className="Responsive-NavBar"
+                onLoad={changeColor}
+            >
                 <div className="burger" onClick={() => clicked()}>
                     <h2 id="burgerID">Open</h2>
                     <div id="content-container" className="hidden">

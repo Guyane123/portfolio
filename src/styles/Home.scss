@@ -24,6 +24,11 @@
         font-size: 2em;
         visibility: hidden
     }
+    .blackMessage {
+        background-color: rgb(0, 0, 0);
+        box-shadow:0px 0px 0px 4px rgb(30, 30, 30) inset;
+        color: white;
+      } 
     .message1 {
         visibility: visible;
     }
@@ -112,7 +117,23 @@
         margin-top: 0px;
     }
 }
-
+.goUp {
+    position: fixed;
+    height: 50px;
+    width: 50px;
+    border: solid 5px rgb(30, 30, 30);
+    border-radius: 900px;
+    right: 2%;
+    bottom: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+.blackGoUp {
+    color: black;
+}
 @keyframes message {
     from {
         visibility: hidden;
@@ -172,6 +193,9 @@
     }
 }
 @media (max-width: 480px) {
+    .goUp {
+        right: 10%;
+    }
     .message {
       font-size: 20px;
     }
