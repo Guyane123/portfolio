@@ -12,9 +12,7 @@
   animation-name: slideinright;
 }
 .NavBar ul a:hover {
-  position: relative;
-  border: 1px white solid;
-  border-radius: 5px;
+  text-decoration: underline;
 }
 .NavBar ul a {
   text-decoration: none;
@@ -52,6 +50,10 @@
   display: none;
 }
 
+#burgerID {
+  color: black;
+}
+
 .burger {
   animation-duration: 1s;
   animation-name: slideinright2;
@@ -76,14 +78,19 @@
 .colorContainer {
   height: 20px;
   width: 50px;
+  border: rgb(255, 200, 60) solid 4px;
   background-color: white;
   border-radius: 900px;
 }
 
-.sun, .moon {
+.colorContainer:hover {
+  cursor: pointer;
+}
+
+.sun {
+  background-color: rgb(255, 255, 255);
   height: 20px;
   width: 20px;
-  background-color: rgb(255, 255, 255);
   border-radius: 900px;
   animation-name: slidewhite;
   animation-duration: 0.5s;
@@ -91,6 +98,11 @@
 }
 
 .moon {
+  border-radius: 200px;
+  height: 16px;
+  width: 16px;
+  border: 2px solid black;
+  background-color: rgb(255, 255, 255);
   animation-name: slideblack;
   animation-duration: 0.5s;
   animation-fill-mode: forwards;
@@ -102,8 +114,7 @@
     transform: translateX(0%);
   }
   to {
-    background-color: rgb(255, 255, 255);
-    transform: translateX(125%);
+    transform: translateX(150%);
   }
 }
 @keyframes slidewhite {

@@ -1,7 +1,17 @@
 .Footer {
-    height: 50px;
-    bottom: 0px;
-    width: 100vw;
-    background-color: antiquewhite;
-    padding: 0px;
+    padding: 10vh 0px 0px 0px;
+}
+.GoDown {
+    animation-name: upanddown;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+
+}
+@keyframes upanddown {
+    from {
+        transform: translateY(-10%);
+    }
+    to {
+        transform: translateY(+10%);
+    }
 }

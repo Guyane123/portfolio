@@ -4,16 +4,15 @@ import "./styles/NavBar.css";
 
 const NavBar = () => {
     let w = window.innerWidth;
-    let h = window.innerWidth;
     let nbrClick = 0;
     function clicked() {
         document.getElementById("content-container").classList.toggle("hidden");
         nbrClick = nbrClick + 1;
         console.log(nbrClick);
-        if (nbrClick % 2 == 0) {
-            document.getElementById("burgerID").innerHTML = "Open";
+        if (nbrClick % 2 === 0) {
+            document.getElementById("burgerID").innerHTML = "🍔";
         } else {
-            document.getElementById("burgerID").innerHTML = "close";
+            document.getElementById("burgerID").innerHTML = "&#10006";
         }
     }
     function changeColor() {
@@ -32,6 +31,7 @@ const NavBar = () => {
     if (w > 800) {
         return (
             <div id="navbarID" className="NavBar">
+                <div className="logo"></div>
                 <ul>
                     <li>
                         <Link to="/">Accueil</Link>
@@ -65,7 +65,7 @@ const NavBar = () => {
                 onLoad={changeColor}
             >
                 <div className="burger" onClick={() => clicked()}>
-                    <h2 id="burgerID">Open</h2>
+                    <h2 id="burgerID">🍔</h2>
                     <div id="content-container" className="hidden">
                         <ul>
                             <li>
@@ -79,6 +79,15 @@ const NavBar = () => {
                             </li>
                             <li>
                                 <Link to="/skills">Compétences</Link>
+                            </li>
+                            <li>
+                                <div
+                                    id="colorContainer"
+                                    onClick={() => changeColor()}
+                                    className="colorContainer"
+                                >
+                                    <div id="sun" className="sun"></div>
+                                </div>
                             </li>
                         </ul>
                     </div>

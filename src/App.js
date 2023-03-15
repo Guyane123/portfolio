@@ -2,9 +2,10 @@ import NavBar from "./NavBar";
 import { Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
-import Compétences from "./pages/Compétences";
+import Competences from "./pages/Competences";
 import Footer from "./Footer";
 import GoUp from "./GoUp";
+import React from "react";
 
 function App() {
     return (
@@ -13,7 +14,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="about" element={<About />} />
-                <Route path="skills" element={<Compétences />} />
+                <Route path="skills" element={<Competences />} />
             </Routes>
             <GoUp />
             <Footer />

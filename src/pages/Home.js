@@ -2,6 +2,7 @@ import React from "react";
 import "../styles/Home.css";
 import Moi from "../Moi";
 import Biographie from "../Biographie";
+import "css-doodle";
 
 const Home = () => {
     return (
@@ -11,7 +12,10 @@ const Home = () => {
                     <li>
                         <div className="pfp pfp1"></div>
                         <div className="message blackMessage message1">
-                            Hello !<span id="hand">👋</span>
+                            Hello !
+                            <span aria-label="Hello Emoji" role="img" id="hand">
+                                👋
+                            </span>
                         </div>
                     </li>
                     <li>

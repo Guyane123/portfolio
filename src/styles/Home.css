@@ -1,3 +1,6 @@
+.Home {
+  margin-top: 150px;
+}
 .Home ul {
   list-style-type: none;
   margin-left: -40px;
@@ -54,6 +57,7 @@
   animation-fill-mode: forwards;
 }
 .Home .pfp {
+  min-width: 50px;
   z-index: -2;
   margin-right: 20px;
   height: 50px;
@@ -86,16 +90,71 @@
   animation-fill-mode: forwards;
 }
 
-.Biographie .container {
-  grid-template-columns: 8ch auto;
-  width: 10%;
-  background-color: black;
+@keyframes scrolling-left1 {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+    overflow-x: hidden;
+  }
+}
+@keyframes scrolling-left2 {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-200%);
+    overflow-x: hidden;
+  }
+}
+@keyframes scrolling-left3 {
+  0% {
+    transform: translateX(200%);
+  }
+  100% {
+    transform: translateX(0%);
+    overflow-x: hidden;
+  }
+}
+@media (max-width: 480px) {
+  .Home {
+    display: inline-block;
+  }
+}
+.Biographie {
+  width: 100%;
+  overflow: hidden;
+  animation-name: slideinbottom;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+}
+.Biographie p {
+  position: relative;
+  width: 100%;
+  padding-top: 20px;
+  white-space: nowrap;
+  font-size: 2em;
+}
+.Biographie .marquee {
+  display: inline-block;
+  animation: scrolling-left1 20s linear infinite;
+}
+.Biographie .marquee2 {
+  position: absolute;
+  display: inline-block;
+  animation: scrolling-left2 20s linear infinite;
+  animation-delay: 10s;
+}
+.Biographie .marquee, .Biographie .marquee2 {
+  display: inline-block;
+  padding-left: 10px;
 }
 
 .Moi {
+  font-size: 2em;
   margin-top: 100px;
-}
-.Moi h2 {
   visibility: hidden;
   padding-bottom: 25px;
   text-align: justify;
@@ -104,9 +163,13 @@
   animation-duration: 2s;
   animation-fill-mode: forwards;
 }
+.Moi a {
+  color: rgb(255, 200, 60);
+  text-decoration: none;
+}
 
 @media (min-width: 1080px) {
-  .Home, .Biographie {
+  .Home {
     display: flex;
     justify-content: space-around;
   }
@@ -130,7 +193,29 @@
 }
 
 .blackGoUp {
-  color: black;
+  position: fixed;
+  height: 50px;
+  width: 50px;
+  border: solid 5px rgb(30, 30, 30);
+  border-radius: 900px;
+  right: 2%;
+  bottom: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+}
+
+.GoDown {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 4em;
+}
+.GoDown a {
+  text-decoration: none;
+  color: rgb(255, 200, 60);
 }
 
 @keyframes message {
@@ -199,19 +284,5 @@
   }
   .message {
     font-size: 20px;
-  }
-  .Biographie {
-    margin-left: 0px;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column;
-  }
-  .Biographie img {
-    margin-bottom: 75px;
-    position: relative;
-    padding-right: 0px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 75vw;
   }
 }/*# sourceMappingURL=Home.css.map */
