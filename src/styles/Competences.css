@@ -1,0 +1,30 @@
+h2 {
+  color: white;
+}
+
+.langages {
+  margin-top: 100px;
+  z-index: 9999;
+  padding: 0px 10% 0px 10%;
+  padding-right: 5px;
+  position: absolute;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 12px;
+  -moz-column-gap: 12px;
+       column-gap: 12px;
+  background-color: black;
+  height: 500px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-content: center;
+  height: 100px;
+  margin-top: 20px;
+  background-color: blue;
+  width: 200px;
+}/*# sourceMappingURL=Competences.css.map */

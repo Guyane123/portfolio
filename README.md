@@ -9,6 +9,8 @@ Personnal portfolio
 - Les différents langages que je connais
 - la flèche pour aller en haut sur la page Accueil
 - footer
+- page contact
+	-> Nom Prenom email message
 
 ## Fait
 - ~~Animation~~

@@ -40,10 +40,7 @@ const NavBar = () => {
                         <Link to="/About">A propos</Link>
                     </li>
                     <li>
-                        <Link to="/About">Experience</Link>
-                    </li>
-                    <li>
-                        <Link to="/skills">Compétences</Link>
+                        <Link to="/Contact">Contact</Link>
                     </li>
                     <li>
                         <div
@@ -65,7 +62,11 @@ const NavBar = () => {
                 onLoad={changeColor}
             >
                 <div className="burger" onClick={() => clicked()}>
-                    <h2 id="burgerID">🍔</h2>
+                    <h2 id="burgerID">
+                        <span role="img" aria-label="open">
+                            🍔
+                        </span>
+                    </h2>
                     <div id="content-container" className="hidden">
                         <ul>
                             <li>

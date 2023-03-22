@@ -1,8 +1,9 @@
 import React from "react";
 import "../styles/Home.css";
 import Moi from "../Moi";
-import Biographie from "../Biographie";
+import Marquee from "../Marquee";
 import "css-doodle";
+import Competences from "../Competences";
 
 const Home = () => {
     return (
@@ -39,7 +40,8 @@ const Home = () => {
                 </ul>
                 <Moi />
             </div>
-            <Biographie />
+            <Marquee />
+            <Competences />
         </div>
     );
 };
