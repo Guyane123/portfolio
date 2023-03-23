@@ -18,11 +18,6 @@ const About = () => {
         document
             .getElementById("card")
             .addEventListener("mousemove", handleMouseMove);
-        return () => {
-            document
-                .getElementById("card")
-                .removeEventListener("mousemove", handleMouseMove);
-        };
     }, []);
     return (
         <div className="Contact modules">
