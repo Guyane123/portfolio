@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "../styles/Contact.css";
+import "../styles/pages/Contact.css";
 
 const About = () => {
     const [mousePos, setMousePos] = useState(0);

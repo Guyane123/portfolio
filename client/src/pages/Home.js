@@ -1,9 +1,9 @@
 import React from "react";
-import "../styles/Home.css";
-import Moi from "../Moi";
-import Marquee from "../Marquee";
+import "../styles/pages/Home.css";
+import Moi from "../modules/Moi";
+import Marquee from "../modules/Marquee";
 import "css-doodle";
-import Competences from "../Competences";
+import Competences from "../modules/Competences";
 
 const Home = () => {
     return (

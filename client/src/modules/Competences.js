@@ -1,6 +1,6 @@
 import React from "react";
-import "./styles/Home.css";
-import "./styles/Competences.css";
+import "../styles/pages/Home.css";
+import "../styles/modules/Competences.css";
 // import CallToAction from "./CallToAction";
 
 const Competences = () => {
