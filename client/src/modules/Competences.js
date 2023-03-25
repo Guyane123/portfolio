@@ -1,30 +1,80 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/pages/Home.css";
 import "../styles/modules/Competences.css";
 // import CallToAction from "./CallToAction";
 
 const Competences = () => {
+    const containers = document.querySelectorAll(".container");
+    const [mousePos, setMousePos] = useState(0);
+    let mouseIsDown = false;
+    useEffect(() => {
+        const handleMouseMove = (e) => {
+            setMousePos({ x: e.clientX, y: e.clientY });
+        };
+        document
+            .querySelector(".langages")
+            .addEventListener("mousemove", handleMouseMove);
+    }, []);
+    function mouseDown(id) {
+        mouseIsDown = true;
+        console.log("y");
+        if (mouseIsDown === true) {
+            document.getElementById(id).style.left =
+                (mousePos.x / window.innerWidth) * 100 + "%";
+        }
+        window.addEventListener("mousedown", function() {
+            mouseIsDown = true;
+        });
+        window.addEventListener("mouseup", function() {
+            mouseIsDown = false;
+        });
+    }
+
     return (
         <div className="Footer" id="footer">
             {/* <CallToAction /> */}
             <div className="langages">
-                <div className="container">
+                <div
+                    className="container"
+                    id="a"
+                    onMouseMove={() => mouseDown("a")}
+                >
                     <h2>JavaScript</h2>
                 </div>
-                <div className="container">
-                    <h2>React.js</h2>
+                <div
+                    className="container"
+                    id="b"
+                    onMouseMove={() => mouseDown("b")}
+                >
+                    <h2>HTML</h2>
                 </div>
-                <div className="container">
-                    <h2>X</h2>
-                </div>
-                <div className="container">
+                <div
+                    className="container"
+                    id="c"
+                    onMouseMove={() => mouseDown("c")}
+                >
                     <h2>CSS</h2>
                 </div>
-                <div className="container">
-                    <h2>SCSS</h2>
+                <div
+                    className="container"
+                    id="d"
+                    onMouseMove={() => mouseDown("d")}
+                >
+                    <h2>Node.js</h2>
                 </div>
-                <div className="container">
-                    <h2>HTML</h2>
+                <div
+                    className="container"
+                    id="e"
+                    onMouseMove={() => mouseDown("e")}
+                >
+                    <h2>React</h2>
+                </div>
+                <div
+                    className="container"
+                    id="f"
+                    onMouseMove={() => mouseDown("f")}
+                >
+                    <h2>X</h2>
                 </div>
             </div>
             <css-doodle click-to-update>

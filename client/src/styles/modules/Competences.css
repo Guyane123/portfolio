@@ -19,6 +19,9 @@ h2 {
 }
 
 .container {
+  user-select: none;
+  position: relative;
+  cursor: grab;
   display: flex;
   justify-content: center;
   text-align: center;

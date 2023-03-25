@@ -19,6 +19,7 @@ Mon portfolio.
 -   page contact
 -   une meilleur card dans la page contact
 -   des animations pour la page contact
+-   déplacer des éléments
 
 ### Fait
 

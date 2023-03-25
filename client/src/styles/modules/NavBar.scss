@@ -122,6 +122,14 @@
         transform: translateX(-5%);
     }
 }
+@media (min-width: 1080px) {
+    .NavBar {
+        background-color: red;
+    }
+    .NavBar {
+        background-color: blue;
+    }
+}
 #content-container {
     animation: slideinleft;
     animation-duration: 1s;

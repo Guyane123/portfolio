@@ -1,9 +1,19 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import React, { useState, useEffect } from "react";
 import "../styles/modules/NavBar.css";
 
 const NavBar = () => {
     let w = window.innerWidth;
+    let [wi, setW] = useState(0);
+    useEffect(() => {
+        const handleWindowResize = (e) => {
+            setW({ w: window.innerWidth });
+        };
+        window.addEventListener("resize", () => handleWindowResize());
+        // return () => {
+        //     window.removeEventListener("resize", handleWindowResize());
+        // };
+    });
     let nbrClick = 0;
     function clicked() {
         document.getElementById("content-container").classList.toggle("hidden");
@@ -30,28 +40,29 @@ const NavBar = () => {
     }
     if (w > 800) {
         return (
-            <div id="navbarID" className="NavBar">
-                <div className="logo"></div>
-                <ul>
-                    <li>
-                        <Link to="/">Accueil</Link>
-                    </li>
-                    <li>
-                        <Link to="/About">A propos</Link>
-                    </li>
-                    <li>
-                        <Link to="/Contact">Contact</Link>
-                    </li>
-                    <li>
-                        <div
-                            id="colorContainer"
-                            onClick={() => changeColor()}
-                            className="colorContainer"
-                        >
-                            <div id="sun" className="sun"></div>
-                        </div>
-                    </li>
-                </ul>
+            <div>
+                <div className="NavBar">
+                    <div className="logo"></div>
+                    <ul>
+                        <li>
+                            <Link to="/">Accueil</Link>
+                        </li>
+                        <li>
+                            <Link to="/About">A propos</Link>
+                        </li>
+                        <li>
+                            <Link to="/Contact">Contact</Link>
+                        </li>
+                        <li>
+                            <div
+                                onClick={() => changeColor()}
+                                className="colorContainer"
+                            >
+                                <div id="sun" className="sun"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
             </div>
         );
     } else {
@@ -75,9 +86,7 @@ const NavBar = () => {
                             <li>
                                 <Link to="/About">A propos</Link>
                             </li>
-                            <li>
-                                <Link to="/About">Experience</Link>
-                            </li>
+                            <li></li>
                             <li>
                                 <Link to="/skills">Compétences</Link>
                             </li>

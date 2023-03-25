@@ -157,12 +157,13 @@
   color: rgb(255, 200, 60);
 }
 .Biographie .marquee2 {
+  margin-bottom: 100px;
   position: absolute;
   display: inline-block;
   animation: scrolling-left2 20s linear infinite;
   animation-delay: 10s;
 }
-.Biographie .marquee2 span:nth-child(10) {
+.Biographie .marquee2 span:nth-child(5) {
   color: rgb(255, 200, 60);
 }
 
