@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "../styles/modules/NavBar.css";
+import Competences from "./Competences";
 
 const NavBar = () => {
     let w = window.innerWidth;
@@ -16,7 +17,9 @@ const NavBar = () => {
     });
     let nbrClick = 0;
     function clicked() {
-        document.getElementById("content-container").classList.toggle("hidden");
+        document
+            .getElementById("responsivecontent-container")
+            .classList.toggle("hidden");
         nbrClick = nbrClick + 1;
         console.log(nbrClick);
         if (nbrClick % 2 === 0) {
@@ -32,6 +35,7 @@ const NavBar = () => {
         document
             .getElementById("colorContainer")
             .classList.toggle("blackColorContainer");
+        document.querySelector(".langages").classList.toggle("blackMode");
         document.body.classList.toggle("blackMode");
         const message = document.querySelectorAll(".message");
         message.forEach((element) => {
@@ -40,29 +44,28 @@ const NavBar = () => {
     }
     if (w > 800) {
         return (
-            <div>
-                <div className="NavBar">
-                    <div className="logo"></div>
-                    <ul>
-                        <li>
-                            <Link to="/">Accueil</Link>
-                        </li>
-                        <li>
-                            <Link to="/About">A propos</Link>
-                        </li>
-                        <li>
-                            <Link to="/Contact">Contact</Link>
-                        </li>
-                        <li>
-                            <div
-                                onClick={() => changeColor()}
-                                className="colorContainer"
-                            >
-                                <div id="sun" className="sun"></div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+            <div className="NavBar">
+                <div className="logo"></div>
+                <ul>
+                    <li>
+                        <Link to="/">Accueil</Link>
+                    </li>
+                    <li>
+                        <Link to="/About">A propos</Link>
+                    </li>
+                    <li>
+                        <Link to="/Contact">Contact</Link>
+                    </li>
+                    <li>
+                        <div
+                            id="colorContainer"
+                            onClick={() => changeColor()}
+                            className="colorContainer"
+                        >
+                            <div id="sun" className="sun"></div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         );
     } else {
@@ -78,7 +81,7 @@ const NavBar = () => {
                             🍔
                         </span>
                     </h2>
-                    <div id="content-container" className="hidden">
+                    <div id="responsivecontent-container" className="hidden">
                         <ul>
                             <li>
                                 <Link to="/">Accueil</Link>

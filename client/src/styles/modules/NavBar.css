@@ -1,3 +1,6 @@
+.NavBar {
+  z-index: 99999999;
+}
 .NavBar ul {
   margin-top: 10px;
   display: flex;
@@ -127,9 +130,15 @@
     transform: translateX(-5%);
   }
 }
-#content-container {
-  animation: slideinleft;
-  animation-duration: 1s;
+@media (min-width: 1080px) {
+  .NavBar {
+    background-color: red;
+  }
+  .NavBar {
+    background-color: blue;
+  }
+}
+#responsivecontent-container {
   width: 65vw;
   height: 100vh;
   border: black 2px solid;
