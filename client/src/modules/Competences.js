@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/pages/Home.css";
 import "../styles/modules/Competences.css";
 import Nodejs from "./Nodejs";
@@ -28,7 +28,6 @@ const Competences = () => {
     function handleMouseUp() {
         setIsDragging(false);
     }
-    let w = window.innerWidth;
     return (
         <div className="Footer" id="footer">
             <div

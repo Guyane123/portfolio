@@ -5,7 +5,7 @@ const About = () => {
     const [mousePos, setMousePos] = useState(0);
     useEffect(() => {
         const handleMouseMove = (e) => {
-            console.log(e);
+            // console.log(e);
             if (
                 // e.clientX < 100 &&
                 // e.clientX > 300 &&
@@ -19,6 +19,45 @@ const About = () => {
             .getElementById("card")
             .addEventListener("mousemove", handleMouseMove);
     }, []);
+    const [author1, setAuthor] = useState("");
+    const [message1, setMessage] = useState("");
+    const [mail1, setMail] = useState("");
+
+    const handleSubmit = (e) => {
+        const data = {
+            author: author1.author,
+            message: message1.message,
+            mail: mail1.mail,
+        };
+
+        fetch("http://localhost:5000/post", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(data),
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error("Erreur lors de l'envoi de la requête");
+                }
+                return response.json();
+            })
+            .then((data) => {
+                console.log(data); // Affiche la réponse de l'API au format JSON
+                alert("message envoyé");
+            })
+            .catch((error) => {
+                console.error(error);
+            });
+    };
+    const handleChangeAuthor = (e) => {
+        setAuthor({ author: e.target.value });
+    };
+    const handleChangeMessage = (e) => {
+        setMessage({ message: e.target.value });
+    };
+    const handleChangeMail = (e) => {
+        setMail({ mail: e.target.value });
+    };
     return (
         <div className="Contact modules">
             <div id="card" className="card">
@@ -47,6 +86,8 @@ const About = () => {
                     <span className="required">*</span>
                 </label>
                 <input
+                    value={author1.author}
+                    onChange={handleChangeAuthor}
                     id="name"
                     name="name"
                     className="input"
@@ -59,6 +100,8 @@ const About = () => {
                     <span className="required">*</span>
                 </label>
                 <input
+                    value={mail1.mail}
+                    onChange={handleChangeMail}
                     id="email"
                     name="email"
                     required
@@ -73,6 +116,8 @@ const About = () => {
                     <span className="required">*</span>
                 </label>
                 <input
+                    value={message1.message}
+                    onChange={handleChangeMessage}
                     id="message"
                     name="message"
                     required
@@ -82,7 +127,12 @@ const About = () => {
                 ></input>{" "}
                 <br />
                 <br />
-                <input id="submit" className="input" type="submit"></input>
+                <button
+                    id="submit"
+                    onClick={handleSubmit}
+                    className="input"
+                    // type="submit"
+                ></button>
             </div>
         </div>
     );

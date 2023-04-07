@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import React, { useState, useEffect } from "react";
 import "../styles/modules/NavBar.css";
-import Competences from "./Competences";
 
 const NavBar = () => {
     let w = window.innerWidth;

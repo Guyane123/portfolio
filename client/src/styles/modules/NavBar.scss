@@ -134,14 +134,16 @@
 #responsivecontent-container {
     // animation: slideinleft;
     // animation-duration: 1s;
+    position: fixed;
     width: 65vw;
     height: 100vh;
-    border: black 2px solid;
+    // border: black 2px solid;
+    margin-bottom: 100px;
     margin-left: -12px;
     margin-top: 35px;
     border-top: 0px;
     background-color: white;
-    z-index: -9999;
+    z-index: 99999999999999999999999999;
 }
 
 // ANIMATION
