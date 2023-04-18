@@ -1,18 +1,16 @@
 import { Link } from "react-router-dom";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "../styles/modules/NavBar.css";
+import Competences from "./Competences.js";
 
 const NavBar = () => {
     let w = window.innerWidth;
-    let [wi, setW] = useState(0);
-    useEffect(() => {
+    let [wi, setWi] = useState();
+    useState(() => {
         const handleWindowResize = (e) => {
-            setW({ w: window.innerWidth });
+            setWi({ w: window.innerWidth });
         };
         window.addEventListener("resize", () => handleWindowResize());
-        // return () => {
-        //     window.removeEventListener("resize", handleWindowResize());
-        // };
     });
     let nbrClick = 0;
     function clicked() {

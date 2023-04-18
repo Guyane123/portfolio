@@ -179,6 +179,16 @@
         color: rgb(255, 200, 60);
         text-decoration: none;
     }
+    .letters {
+        position: relative;
+    }
+    .letters:hover {
+       font-size: 2.25em;
+       cursor: pointer;
+    }
+    .Moi:hover {
+        transform: translateY(-50%);
+    }
 }
 @media (min-width: 1080px) {
     .Home {
