@@ -153,7 +153,7 @@
   display: inline-block;
   animation: scrolling-left1 20s linear infinite;
 }
-.Biographie .marquee span:nth-child(1) {
+.Biographie .marquee span:nth-child(3) {
   color: rgb(255, 200, 60);
 }
 .Biographie .marquee2 {
@@ -182,17 +182,20 @@
   color: rgb(255, 200, 60);
   text-decoration: none;
 }
-.Moi .letters {
-  position: relative;
+.Moi .MoiContainer {
+  background-position: left;
+  background-size: 0% 100%;
+  background-image: linear-gradient(to right, #9ae6b4, yellow);
+  padding-bottom: thickness;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+  display: inline;
+  background-repeat: no-repeat;
+  transition: all 500ms ease-in-out;
 }
-.Moi .letters:hover {
-  font-size: 2.25em;
-  cursor: pointer;
+.Moi .MoiContainer:hover {
+  background-size: 100% 100%;
 }
-.Moi .Moi:hover {
-  transform: translateY(-50%);
-}
-
 @media (min-width: 1080px) {
   .Home {
     display: flex;
