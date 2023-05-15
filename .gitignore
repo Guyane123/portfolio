@@ -8,3 +8,6 @@ dist/
 coverage/
 .vscode/
 .env
+client/build
+build/
+build
