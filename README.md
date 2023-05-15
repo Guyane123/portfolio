@@ -1,6 +1,14 @@
-# My Portfolio
+# Mon Portfolio 🚀
 
-Mon portfolio.
+Ce projet a été créé pour mettre en valeur mes compétences en informatique, notamment en utilisant 🖥️ :
+
+- Node.js
+- CSS
+- JavaScript
+- React
+- HTML
+
+Vous pouvez le retrouver en ligne sur https://damien-projet.fr
 
 ## Mes objectifs
 
@@ -8,29 +16,9 @@ Mon portfolio.
 -   M'entraîner sur un projet complet
 -   Me former sur de nouvelles technologies
 
-### A faire :
+## ✨ Fonctionnalités
 
--   La page A propos
--   Les Trucs vectoriel là
--   plus responsive
--   footer
--   backend pour la page "contact" (récuperer les messages de la page contact pour l'envoyer sur un API)
--   une meilleur card dans la page contact
--   des animations pour la page contact
--   réparer le burger menu
+- 🎓 Présentation de mes compétences en informatique
+- :mailbox: Formulaire de contact
 
-### Fait
 
--   ~~Les différents langages que je connais ~~
--   ~~Animation~~
--   ~~la flèche pour aller en haut sur la page Accueil~~
--   ~~Black mode~~
--   ~~Marquee~~
--   ~~message de présentation~~
--   ~~Introduction~~
--   ~~un logo web~~
--   ~~un titre~~
--   e~~page contacte~~
--   ~~Go Up~~
--   ~~la flèche pour aller en haut sur la page Accueil~~
--   ~~déplacer des éléments~~

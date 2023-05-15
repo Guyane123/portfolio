@@ -32,7 +32,8 @@ const NavBar = () => {
         document
             .getElementById("colorContainer")
             .classList.toggle("blackColorContainer");
-        document.querySelector(".langages").classList.toggle("blackMode");
+        document.querySelector(".langages").style.backgroundColor =
+            document.body.style.backgroundColor;
         document.body.classList.toggle("blackMode");
         const message = document.querySelectorAll(".message");
         message.forEach((element) => {
