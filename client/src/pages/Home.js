@@ -6,6 +6,7 @@ import "css-doodle";
 import Competences from "../modules/Competences";
 
 const Home = () => {
+    //     let [color, setColor] = useState("black");
     return (
         <div className="modules">
             <div className="Home">

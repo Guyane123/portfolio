@@ -1,4 +1,5 @@
 .Home {
+  overflow-y: hidden;
   margin-top: 150px;
 }
 .Home ul {
@@ -13,14 +14,18 @@
   align-items: center;
   align-content: stretch;
 }
+.Home * {
+  overflow: hidden;
+}
 .Home .message {
+  overflow: hidden;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   align-items: center;
   padding: 10px 40px 10px 40px;
   background-color: rgb(239, 239, 239);
-  border-radius: 50px;
+  border-radius: 30px;
   font-size: 2em;
   visibility: hidden;
 }
@@ -153,7 +158,7 @@
   display: inline-block;
   animation: scrolling-left1 20s linear infinite;
 }
-.Biographie .marquee span:nth-child(3) {
+.Biographie .marquee span:nth-child(2) {
   color: rgb(255, 200, 60);
 }
 .Biographie .marquee2 {
@@ -163,7 +168,7 @@
   animation: scrolling-left2 20s linear infinite;
   animation-delay: 10s;
 }
-.Biographie .marquee2 span:nth-child(4) {
+.Biographie .marquee2 span:nth-child(3) {
   color: rgb(255, 200, 60);
 }
 
@@ -172,7 +177,7 @@
   margin-top: 100px;
   visibility: hidden;
   padding-bottom: 25px;
-  text-align: justify;
+  text-align: center;
   animation-delay: 2.1s;
   animation-name: slidein;
   animation-duration: 2s;
@@ -203,6 +208,9 @@
   }
   .Moi {
     margin-top: 0px;
+  }
+  .marquee {
+    animation-delay: 1s;
   }
 }
 .goUp {

@@ -80,59 +80,63 @@ const About = () => {
                     <h4>Bretagne, Morbihan</h4>
                 </div>
             </div>
-            <div className="contactInputs">
-                <label for="name">
-                    <span>Votre prénom</span>
-                    <span className="required">*</span>
-                </label>
-                <input
-                    value={author1.author}
-                    onChange={handleChangeAuthor}
-                    id="name"
-                    name="name"
-                    className="input"
-                    required
-                    placeholder="Your name"
-                    type="text"
-                ></input>
-                <label for="email">
-                    <span>E-mail</span>
-                    <span className="required">*</span>
-                </label>
-                <input
-                    value={mail1.mail}
-                    onChange={handleChangeMail}
-                    id="email"
-                    name="email"
-                    required
-                    className="input"
-                    placeholder="email"
-                    type="email"
-                ></input>{" "}
-                <br />
-                <br />
-                <label for="message">
-                    <span>Message</span>
-                    <span className="required">*</span>
-                </label>
-                <input
-                    value={message1.message}
-                    onChange={handleChangeMessage}
-                    id="message"
-                    name="message"
-                    required
-                    className="input"
-                    placeholder="your text"
-                    type="text"
-                ></input>{" "}
-                <br />
-                <br />
-                <button
-                    id="submit"
-                    onClick={handleSubmit}
-                    className="input"
-                    // type="submit"
-                ></button>
+            <div>
+                <div className="contactInputs">
+                    <label for="name">
+                        <span>Votre prénom</span>
+                        <span className="required">*</span>
+                    </label>
+                    <input
+                        value={author1.author}
+                        onChange={handleChangeAuthor}
+                        id="name"
+                        name="name"
+                        className="input"
+                        required
+                        placeholder="Your name"
+                        type="text"
+                    ></input>
+                    <label for="email">
+                        <span>E-mail</span>
+                        <span className="required">*</span>
+                    </label>
+                    <input
+                        value={mail1.mail}
+                        onChange={handleChangeMail}
+                        id="email"
+                        name="email"
+                        required
+                        className="input"
+                        placeholder="email"
+                        type="email"
+                    ></input>{" "}
+                    <br />
+                    <br />
+                    <label for="message">
+                        <span>Message</span>
+                        <span className="required">*</span>
+                    </label>
+                    <input
+                        value={message1.message}
+                        onChange={handleChangeMessage}
+                        id="message"
+                        name="message"
+                        required
+                        className="input"
+                        placeholder="your text"
+                        type="text"
+                    ></input>{" "}
+                    <br />
+                    <br />
+                    <button
+                        id="submit"
+                        onClick={handleSubmit}
+                        className="input"
+                        // type="submit"
+                    >
+                        Envoyer!
+                    </button>
+                </div>
             </div>
         </div>
     );

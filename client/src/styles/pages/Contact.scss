@@ -23,8 +23,8 @@ body {
     }
     #message {
         margin-bottom: 32px;
-        width: 640px;
-        height: 200px;
+        width: 300px;
+        height: 150px;
     }
     #submit {
         line-height: 0px;
@@ -38,11 +38,13 @@ body {
     }
 
 }
-.card {
+#card {
     height: 400px;
     width: 40%;
     position: relative;
     min-width: 200px;
+    margin-right: 20px;
+    margin-bottom: 100px;
     max-width: 500px;
     background-color: rgb(255, 200, 60);
     border-radius: 10px;
@@ -76,3 +78,18 @@ body {
     display: flex;
     justify-content: space-around;
 }
+@media (max-width: 1080px) {
+    .Contact {
+        z-index: 0;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        align-items: center;
+        align-content: stretch;
+    }
+    #card {
+        margin: 0px;
+        margin-bottom: 100px;
+    }
+  }

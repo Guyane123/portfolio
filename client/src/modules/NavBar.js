@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
+import React, { Component, useState } from "react";
 import "../styles/modules/NavBar.css";
 import Competences from "./Competences.js";
 
@@ -40,7 +40,7 @@ const NavBar = () => {
             element.classList.toggle("blackMessage");
         });
     }
-    if (w > 800) {
+    if (w > 500) {
         return (
             <div className="NavBar">
                 <div className="logo"></div>
@@ -82,16 +82,6 @@ const NavBar = () => {
                     <div id="responsivecontent-container" className="hidden">
                         <ul>
                             <li>
-                                <Link to="/">Accueil</Link>
-                            </li>
-                            <li>
-                                <Link to="/About">A propos</Link>
-                            </li>
-                            <li></li>
-                            <li>
-                                <Link to="/skills">Compétences</Link>
-                            </li>
-                            <li>
                                 <div
                                     id="colorContainer"
                                     onClick={() => changeColor()}
@@ -99,6 +89,16 @@ const NavBar = () => {
                                 >
                                     <div id="sun" className="sun"></div>
                                 </div>
+                            </li>
+                            <li>
+                                <Link to="/">Accueil</Link>
+                            </li>
+                            <li>
+                                <Link to="/About">A propos</Link>
+                            </li>
+                            <li></li>
+                            <li>
+                                <Link to="/Contact">Contact</Link>
                             </li>
                         </ul>
                     </div>

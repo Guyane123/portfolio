@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/pages/Home.css";
 import "../styles/modules/Competences.css";
 import Nodejs from "./Nodejs";
@@ -8,14 +8,16 @@ import CSS from "./CSS";
 
 const Competences = () => {
     const [isDragging, setIsDragging] = useState(false);
-    const [position, setPosition] = useState({ x: 0, y: 0 });
+    const [position, setPosition] = useState({
+        x: Math.random() * 100,
+        y: Math.random() * 100,
+    });
     const [startPosition, setStartPosition] = useState({ x: 0, y: 0 });
 
     function handleMouseDown(e) {
         setIsDragging(true);
         setStartPosition({ x: e.clientX, y: e.clientY });
     }
-
     function handleMouseMove(e) {
         if (isDragging) {
             const dx = e.clientX - startPosition.x;
@@ -23,6 +25,19 @@ const Competences = () => {
             setPosition({ x: position.x + dx, y: position.y + dy });
             setStartPosition({ x: e.clientX, y: e.clientY });
         }
+    }
+    function handleTouchMove(e) {
+        if (isDragging) {
+            const touch = e.touches[0];
+            const tx = touch.clientX - startPosition.x;
+            const ty = touch.clientY - startPosition.y;
+            setPosition({ x: position.x + tx, y: position.y + ty });
+            setStartPosition({ x: touch.clientX, y: touch.clientY });
+        }
+    }
+    function handleTouchStart(e) {
+        setIsDragging(true);
+        setStartPosition({ x: e.touches[0].clientX, y: e.touches[0].clientY });
     }
 
     function handleMouseUp() {
@@ -41,11 +56,13 @@ const Competences = () => {
                     id="f"
                     onMouseDown={handleMouseDown}
                     onMouseMove={handleMouseMove}
-                    // onTouchStart={handleMouseDown}
-                    // onTouchEnd={handleMouseUp}
-                    // onTouchMove={handleMouseMove}
                     onMouseUp={handleMouseUp}
+                    onTouchStart={handleTouchStart}
+                    onTouchMove={handleTouchMove}
+                    onTouchEnd={handleMouseUp}
                     style={{
+                        transform: isDragging ? "scale(120%)" : "scale(100%)",
+                        zIndex: isDragging ? "999" : "0",
                         position: "relative",
                         left: `${position.x}px`,
                         top: `${position.y}px`,
