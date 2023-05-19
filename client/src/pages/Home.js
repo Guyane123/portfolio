@@ -1,12 +1,29 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../styles/pages/Home.css";
 import Moi from "../modules/Moi";
 import Marquee from "../modules/Marquee";
+import NavBar from "../modules/NavBar";
 import "css-doodle";
 import Competences from "../modules/Competences";
 
 const Home = () => {
-    //     let [color, setColor] = useState("black");
+    // const bodyColor = document.body.style.backgroundColor;
+    // const [color, setColor] = useState(bodyColor);
+    // useEffect(() => {
+    //     console.log("Changed collor");
+    // }, [color]);
+    console.log(document.body.style.backgroundColor);
+    useEffect(() => {
+        console.log(document.body.style.backgroundColor);
+        const message = document.querySelectorAll(".message");
+        // if(document.body.style.backgroundColor == {
+
+        // })
+        document.querySelector(".langages").classList.toggle("blackMode");
+        message.forEach((element) => {
+            element.style.backgroundColor = document.body.style.backgroundColor;
+        });
+    });
     return (
         <div className="modules">
             <div className="Home">

@@ -40,7 +40,7 @@ const TReact = () => {
     return (
         <div
             className="container"
-            id="e"
+            id="react"
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
@@ -53,13 +53,10 @@ const TReact = () => {
                 position: "relative",
                 left: `${position.x}px`,
                 top: `${position.y}px`,
-                width: "200px",
-                height: "100px",
-                backgroundColor: "darkblue",
                 cursor: isDragging ? "grabbing" : "grab",
             }}
         >
-            <h2>React</h2>
+            {/* <h2>React</h2> */}
         </div>
     );
 };

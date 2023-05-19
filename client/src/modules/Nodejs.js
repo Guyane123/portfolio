@@ -40,7 +40,7 @@ const Nodejs = () => {
     return (
         <div
             className="container"
-            id="d"
+            id="nodejs"
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
@@ -53,13 +53,10 @@ const Nodejs = () => {
                 position: "relative",
                 left: `${position.x}px`,
                 top: `${position.y}px`,
-                width: "200px",
-                height: "100px",
-                backgroundColor: "green",
                 cursor: isDragging ? "grabbing" : "grab",
             }}
         >
-            <h2>Node.js</h2>
+            {/* <h2>Node.js</h2> */}
         </div>
     );
 };

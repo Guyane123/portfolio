@@ -41,7 +41,7 @@ const HTML = () => {
     return (
         <div
             className="container"
-            id="b"
+            id="html"
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
@@ -54,13 +54,10 @@ const HTML = () => {
                 position: "relative",
                 left: `${position.x}px`,
                 top: `${position.y}px`,
-                width: "200px",
-                height: "100px",
-                backgroundColor: "orange",
                 cursor: isDragging ? "grabbing" : "grab",
             }}
         >
-            <h2>HTML</h2>
+            {/* <h2>HTML</h2> */}
         </div>
     );
 };

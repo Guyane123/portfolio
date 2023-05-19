@@ -45,15 +45,11 @@ const Competences = () => {
     }
     return (
         <div className="Footer" id="footer">
-            <div
-                className="langages blackMode"
-                style={{
-                    backgroundColor: document.body.style.backgroundColor,
-                }}
-            >
+            <div className="langages blackMode">
                 <div
+                    draggable="false"
                     className="container"
-                    id="f"
+                    id="javascript"
                     onMouseDown={handleMouseDown}
                     onMouseMove={handleMouseMove}
                     onMouseUp={handleMouseUp}
@@ -66,13 +62,10 @@ const Competences = () => {
                         position: "relative",
                         left: `${position.x}px`,
                         top: `${position.y}px`,
-                        width: "200px",
-                        height: "100px",
-                        backgroundColor: "yellow",
                         cursor: isDragging ? "grabbing" : "grab",
                     }}
                 >
-                    <h2>JavaScript</h2>
+                    {/* <h2>JavaScript</h2> */}
                 </div>
                 <CSS />
                 <HTML />

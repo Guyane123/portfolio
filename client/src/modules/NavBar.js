@@ -2,8 +2,10 @@ import { Link } from "react-router-dom";
 import React, { Component, useState } from "react";
 import "../styles/modules/NavBar.css";
 import Competences from "./Competences.js";
+import Home from "../pages/Home";
 
 const NavBar = () => {
+    const URL = "http://localhost:3000/";
     let w = window.innerWidth;
     let [wi, setWi] = useState();
     useState(() => {
@@ -32,10 +34,9 @@ const NavBar = () => {
         document
             .getElementById("colorContainer")
             .classList.toggle("blackColorContainer");
-        document.querySelector(".langages").style.backgroundColor =
-            document.body.style.backgroundColor;
         document.body.classList.toggle("blackMode");
         const message = document.querySelectorAll(".message");
+        document.querySelector(".langages").classList.toggle("blackMode");
         message.forEach((element) => {
             element.classList.toggle("blackMessage");
         });

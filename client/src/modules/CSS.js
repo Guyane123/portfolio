@@ -41,7 +41,7 @@ const CSS = () => {
     return (
         <div
             className="container"
-            id="c"
+            id="css"
             onMouseDown={handleMouseDown}
             onMouseMove={handleMouseMove}
             onMouseUp={handleMouseUp}
@@ -54,13 +54,10 @@ const CSS = () => {
                 position: "relative",
                 left: `${position.x}px`,
                 top: `${position.y}px`,
-                width: "200px",
-                height: "100px",
-                backgroundColor: "blue",
                 cursor: isDragging ? "grabbing" : "grab",
             }}
         >
-            <h2>CSS</h2>
+            {/* <h2>CSS</h2> */}
         </div>
     );
 };
