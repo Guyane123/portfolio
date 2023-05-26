@@ -22,7 +22,8 @@ body {
     z-index: 100;
 }
 .blackMode {
-    background-color: black;
+    /* background-color: #fdb8b5; */
+    background-color: #131313;
     color: white;
 }
 @media (max-width: 800px) {

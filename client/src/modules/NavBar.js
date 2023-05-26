@@ -36,10 +36,17 @@ const NavBar = () => {
             .classList.toggle("blackColorContainer");
         document.body.classList.toggle("blackMode");
         const message = document.querySelectorAll(".message");
-        document.querySelector(".langages").classList.toggle("blackMode");
-        message.forEach((element) => {
-            element.classList.toggle("blackMessage");
-        });
+        const langages = document.getElementById("lan");
+        if (langages) {
+            langages.classList.toggle("blackMode");
+        } else {
+        }
+        if (message) {
+            message.forEach((e) => {
+                e.classList.toggle("blackMessage");
+            });
+        } else {
+        }
     }
     if (w > 500) {
         return (

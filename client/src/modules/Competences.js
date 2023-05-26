@@ -43,9 +43,20 @@ const Competences = () => {
     function handleMouseUp() {
         setIsDragging(false);
     }
+    useEffect(() => {
+        blackMode();
+    });
+    function blackMode() {
+        if (document.body.classList == "blackMode") {
+            document.getElementById("lan").classList.add("blackMode");
+        } else {
+            document.getElementById("lan").classList.remove("blackMode");
+        }
+    }
     return (
         <div className="Footer" id="footer">
-            <div className="langages blackMode">
+            <div className="title">Mes compétences</div>
+            <div className="langages" id="lan">
                 <div
                     draggable="false"
                     className="container"

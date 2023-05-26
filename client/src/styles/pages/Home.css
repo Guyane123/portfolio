@@ -1,3 +1,7 @@
+@font-face {
+  font-family: "George Town";
+  src: url("../../media/GeorgeTown-SemiBold.ttf") format("truetype");
+}
 .Home {
   overflow-y: hidden;
   margin-top: 150px;
@@ -158,7 +162,7 @@
   display: inline-block;
   animation: scrolling-left1 20s linear infinite;
 }
-.Biographie .marquee span:nth-child(3) {
+.Biographie .marquee span:nth-child(5) {
   color: rgb(255, 200, 60);
 }
 .Biographie .marquee2 {
@@ -168,10 +172,18 @@
   animation: scrolling-left2 20s linear infinite;
   animation-delay: 10s;
 }
-.Biographie .marquee2 span:nth-child(5) {
+.Biographie .marquee2 span:nth-child(1) {
   color: rgb(255, 200, 60);
 }
 
+@media all and (max-width: 1080px) {
+  .Biographie {
+    animation-delay: 0.2s;
+  }
+  .marquee {
+    animation-delay: 0.2s;
+  }
+}
 .Moi {
   font-size: 2em;
   margin-top: 100px;
@@ -188,6 +200,7 @@
   text-decoration: none;
 }
 .Moi .MoiContainer {
+  font-family: "George Town";
   background-position: left;
   background-size: 0% 100%;
   background-image: linear-gradient(to right, #9ae6b4, yellow);
@@ -325,6 +338,7 @@
 }
 .Footer {
   padding: 5px 0px 0px 0px;
+  margin-top: 100px;
 }
 
 .GoDown {

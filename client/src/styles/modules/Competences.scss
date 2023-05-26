@@ -1,3 +1,8 @@
+$defaultColor: #131313;
+@font-face {
+    font-family: "George Town";
+    src: url('../../media/GeorgeTown-SemiBold.ttf') format("truetype");
+}
 h2 {
     color: white;
   }
@@ -7,9 +12,16 @@ h2 {
     position: relative;
     overflow:hidden;
 }
+.title {
+    display: flex;
+    font-size: 2em;
+    justify-content: center;
+    margin-bottom: 50px;
+    font-family: "George Town", Verdana, Geneva, Tahoma, sans-serif
+}
 .langages {
     overflow:hidden;
-    margin-top: 100px;
+    // margin-top: 100px;
     z-index: 1;
     padding-left: 20px;
     padding-right: 5px;
@@ -35,7 +47,7 @@ h2 {
     touch-action: none;
     overscroll-behavior: none;
     overflow:hidden;
-    color: black;
+    color: $defaultColor;
     user-select: none;
     z-index: 200;
     display: flex;
