@@ -1,7 +1,7 @@
-@font-face {
-    font-family: "George Town";
-    src: url('../../media/GeorgeTown-SemiBold.ttf') format("truetype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+$secondlyColor: rgb(255, 200, 60);
+$maincColor: #131313;
 .Home {
     overflow-y: hidden;
     margin-top: 150px;
@@ -149,17 +149,19 @@
         font-size: 2em;
     }
     .marquee {
+        font-family: 'Montserrat', sans-serif;
         margin-bottom: 100px;
         animation-delay: 2.1s;
         display:inline-block;
         animation: scrolling-left1 20s linear infinite;
         span {
             &:nth-child(#{random(5)}) {
-                color: rgb(255, 200, 60);
+                color: $secondlyColor;
             }
           }
     }
     .marquee2 {
+        font-family: 'Montserrat', sans-serif;
         margin-bottom: 100px;
         position: absolute;
         display:inline-block;
@@ -167,7 +169,7 @@
         animation-delay: 10s;
         span {
             &:nth-child(#{random(5 + random(5))}) {
-              color: rgb(255, 200, 60);
+              color: $secondlyColor;
             }
           }
     }
@@ -189,6 +191,7 @@
     }
 
 .Moi {
+    font-family: 'Montserrat', sans-serif;
     font-size: 2em;
     margin-top: 100px;
     visibility: hidden;
@@ -199,11 +202,11 @@
     animation-duration: 2s;
     animation-fill-mode: forwards;
     a {
-        color: rgb(255, 200, 60);
+        color: $secondlyColor;
         text-decoration: none;
     }
     .MoiContainer {
-        font-family: "George Town";
+        font-family: 'Montserrat', sans-serif;
         background-position: left;
         background-size: 0% 100%;
         background-image: linear-gradient(to right, #9ae6b4, yellow);
@@ -217,8 +220,8 @@
     .MoiContainer:hover {
         background-size: 100% 100%;
     }
-    .Moi:hover {
-
+    a {
+        font-family: 'Montserrat', sans-serif;
     }
 }
 @media (min-width: 1080px) {
@@ -235,31 +238,32 @@
 }
 .goUp {
     position: fixed;
-    height: 50px;
-    width: 50px;
+    height: 40px;
+    width: 100px;
     border: solid 5px rgb(30, 30, 30);
-    border-radius: 900px;
+    background-color: black;
+    border-radius: 10px;
     right: 2%;
-    bottom: 5%;
+    z-index: 9999999;
+    bottom: 3%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
     color: white;
 }
+.goUp:hover {
+    transform: translateY(-10px);
+    cursor: pointer;
+}
 .blackGoUp {
     position: fixed;
-    height: 50px;
-    width: 50px;
     border: solid 5px rgb(30, 30, 30);
-    border-radius: 900px;
-    right: 2%;
-    bottom: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    color: white;
+    // color: rgb(0, 0, 0);
 }
 .GoDown {
     display: flex;
@@ -267,7 +271,7 @@
     margin-bottom: 20px;
     a {
         text-decoration: none;
-        color: rgb(255, 200, 60);
+        color: $secondlyColor;
     }
     font-size: 4em;
 }
@@ -339,7 +343,7 @@
     }
   }
 
-.Footer {
+.Competences {
     padding: 05px 0px 0px 0px;
     margin-top: 100px;
 }
@@ -358,5 +362,5 @@
     }
 }
 .yellowTest {
-    color: rgb(255, 200, 60);
+    color: $secondlyColor;
 }

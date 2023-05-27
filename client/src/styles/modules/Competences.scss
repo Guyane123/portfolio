@@ -1,8 +1,5 @@
 $defaultColor: #131313;
-@font-face {
-    font-family: "George Town";
-    src: url('../../media/GeorgeTown-SemiBold.ttf') format("truetype");
-}
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 h2 {
     color: white;
   }
@@ -17,7 +14,7 @@ h2 {
     font-size: 2em;
     justify-content: center;
     margin-bottom: 50px;
-    font-family: "George Town", Verdana, Geneva, Tahoma, sans-serif
+    font-family: 'Montserrat', sans-serif;
 }
 .langages {
     overflow:hidden;

@@ -1,5 +1,6 @@
 .NavBar {
     z-index: 99999999;
+    background-color: rgb(0, 0, 0, 0.5);
     ul {
         margin-top: 10px;
         display: flex;
@@ -121,14 +122,6 @@
     to {
         background-color: rgb(0, 0, 0);
         transform: translateX(-5%);
-    }
-}
-@media (min-width: 1080px) {
-    .NavBar {
-        background-color: red;
-    }
-    .NavBar {
-        background-color: blue;
     }
 }
 #responsivecontent-container {

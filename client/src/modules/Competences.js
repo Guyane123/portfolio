@@ -54,7 +54,7 @@ const Competences = () => {
         }
     }
     return (
-        <div className="Footer" id="footer">
+        <div className="Competences" id="competences">
             <div className="title">Mes compétences</div>
             <div className="langages" id="lan">
                 <div

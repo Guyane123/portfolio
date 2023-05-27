@@ -5,6 +5,7 @@ import Marquee from "../modules/Marquee";
 import NavBar from "../modules/NavBar";
 import "css-doodle";
 import Competences from "../modules/Competences";
+import Footer from "../modules/Footer";
 
 const Home = () => {
     useEffect(() => {

@@ -1,0 +1,46 @@
+.Footer {
+    /* height: 100px; */
+    width: 100%;
+    border-top: 4px rgb(255, 249, 249) solid;
+    /* position: absolute;
+    margin-top: 100px */
+}
+.socialMedia {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.page {
+    color: white;
+    text-align: center;
+    text-decoration: underline;
+    text-decoration-color: rgb(255, 200, 60);
+    text-decoration-thickness: 4px;
+}
+.pages a {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 20px;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover {
+    animation-name: onMouseHover;
+    animation-duration: 0.3s;
+}
+@keyframes onMouseHover {
+    from {
+        transform: translateX(0px);
+    }to {
+        transform: translateX(10px);
+    }
+}
+
+.blackText {
+    color: black;
+}

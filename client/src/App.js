@@ -5,6 +5,7 @@ import About from "./pages/About";
 import GoUp from "./modules/GoUp";
 import React from "react";
 import Contact from "./pages/Contact";
+import Footer from "./modules/Footer";
 
 function App() {
     return (
@@ -16,6 +17,7 @@ function App() {
                 <Route path="contact" element={<Contact />} />
             </Routes>
             <GoUp />
+            <Footer />
         </div>
     );
 }

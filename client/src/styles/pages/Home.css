@@ -1,7 +1,4 @@
-@font-face {
-  font-family: "George Town";
-  src: url("../../media/GeorgeTown-SemiBold.ttf") format("truetype");
-}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
 .Home {
   overflow-y: hidden;
   margin-top: 150px;
@@ -157,22 +154,24 @@
   font-size: 2em;
 }
 .Biographie .marquee {
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 100px;
   animation-delay: 2.1s;
   display: inline-block;
   animation: scrolling-left1 20s linear infinite;
 }
-.Biographie .marquee span:nth-child(5) {
+.Biographie .marquee span:nth-child(2) {
   color: rgb(255, 200, 60);
 }
 .Biographie .marquee2 {
+  font-family: "Montserrat", sans-serif;
   margin-bottom: 100px;
   position: absolute;
   display: inline-block;
   animation: scrolling-left2 20s linear infinite;
   animation-delay: 10s;
 }
-.Biographie .marquee2 span:nth-child(1) {
+.Biographie .marquee2 span:nth-child(3) {
   color: rgb(255, 200, 60);
 }
 
@@ -185,6 +184,7 @@
   }
 }
 .Moi {
+  font-family: "Montserrat", sans-serif;
   font-size: 2em;
   margin-top: 100px;
   visibility: hidden;
@@ -200,7 +200,7 @@
   text-decoration: none;
 }
 .Moi .MoiContainer {
-  font-family: "George Town";
+  font-family: "Montserrat", sans-serif;
   background-position: left;
   background-size: 0% 100%;
   background-image: linear-gradient(to right, #9ae6b4, yellow);
@@ -214,6 +214,10 @@
 .Moi .MoiContainer:hover {
   background-size: 100% 100%;
 }
+.Moi a {
+  font-family: "Montserrat", sans-serif;
+}
+
 @media (min-width: 1080px) {
   .Home {
     display: flex;
@@ -228,12 +232,14 @@
 }
 .goUp {
   position: fixed;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 100px;
   border: solid 5px rgb(30, 30, 30);
-  border-radius: 900px;
+  background-color: black;
+  border-radius: 10px;
   right: 2%;
-  bottom: 5%;
+  z-index: 9999999;
+  bottom: 3%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -241,19 +247,18 @@
   color: white;
 }
 
+.goUp:hover {
+  transform: translateY(-10px);
+  cursor: pointer;
+}
+
 .blackGoUp {
   position: fixed;
-  height: 50px;
-  width: 50px;
   border: solid 5px rgb(30, 30, 30);
-  border-radius: 900px;
-  right: 2%;
-  bottom: 5%;
   display: flex;
   justify-content: center;
   align-items: center;
   text-decoration: none;
-  color: white;
 }
 
 .GoDown {
@@ -336,7 +341,7 @@
     font-size: 20px;
   }
 }
-.Footer {
+.Competences {
   padding: 5px 0px 0px 0px;
   margin-top: 100px;
 }

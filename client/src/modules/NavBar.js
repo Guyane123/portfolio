@@ -30,7 +30,11 @@ const NavBar = () => {
     function changeColor() {
         document.getElementById("sun").classList.toggle("sun");
         document.getElementById("sun").classList.toggle("moon");
-        document.getElementById("goUp").classList.toggle("blackGoUp");
+        document.querySelector(".goUp").classList.toggle("blackGoUp");
+        document.getElementById("page").classList.toggle("blackText");
+        document.getElementById("socialMedia").classList.toggle("blackText");
+        document.getElementById("about").classList.toggle("blackText");
+        document.getElementById("contact").classList.toggle("blackText");
         document
             .getElementById("colorContainer")
             .classList.toggle("blackColorContainer");
