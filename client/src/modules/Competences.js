@@ -83,17 +83,6 @@ const Competences = () => {
                 <TReact />
                 <Nodejs />
             </div>
-            <css-doodle click-to-update>
-                <style>
-                    @grid: 1 / 200vw 200vh; background-color:{" "}
-                    {document.body.style.backgroundColor}; background-size:
-                    200px 200px; background-image: @doodle( @grid: 6 / 200%;
-                    @size: 4px; font-size: 4px; color: hsl(@r240, 30%, 50%);
-                    box-shadow: @m3x5( calc(4em - @nx * 1em) calc(@ny * 1em)
-                    @p(@m3(currentColor), @m2(transparent)), calc(2em + @nx *
-                    1em) calc(@ny * 1em) @lp ); );
-                </style>
-            </css-doodle>
         </div>
     );
 };

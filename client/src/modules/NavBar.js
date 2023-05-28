@@ -1,11 +1,8 @@
 import { Link } from "react-router-dom";
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import "../styles/modules/NavBar.css";
-import Competences from "./Competences.js";
-import Home from "../pages/Home";
 
 const NavBar = () => {
-    const URL = "http://localhost:3000/";
     let w = window.innerWidth;
     let [wi, setWi] = useState();
     useState(() => {

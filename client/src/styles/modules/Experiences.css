@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
+
+.Experiences  {
+    margin-top: 300px;
+}
+h2 {
+    margin-bottom: 100px;
+    display: flex;
+    justify-content: center;
+    font-size: 2em;
+    font-family: 'Montserrat';
+}
+.cleather {
+    height: 200px;
+    width: 400px;
+    background-color: #0277bd;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+.projects {
+    display: flex;
+    justify-content: space-around;
+}

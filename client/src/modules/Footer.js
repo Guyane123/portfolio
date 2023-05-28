@@ -13,6 +13,7 @@ const Footer = () => {
                     <Link to="/">
                         <img
                             height="50px"
+                            alt="Logo"
                             src="https://cdn.discordapp.com/attachments/635919509932343336/1112015466580418640/dessin.png"
                         ></img>
                     </Link>
@@ -29,9 +30,14 @@ const Footer = () => {
                     <h2 id="socialMedia" className="page">
                         Social Media
                     </h2>
-                    <a target="_blank" href="https://github.com/Guyane123">
+                    <a
+                        rel="noreferrer"
+                        target="_blank"
+                        href="https://github.com/Guyane123"
+                    >
                         <div className="socialMedia">
                             <svg
+                                alt="Github"
                                 xmlns="http://www.w3.org/2000/svg"
                                 width="48"
                                 height="48"

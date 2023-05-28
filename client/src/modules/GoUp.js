@@ -1,5 +1,3 @@
-import React, { useEffect } from "react";
-
 const GoUp = () => {
     function handleClick(e) {
         // e.preventDefault();
