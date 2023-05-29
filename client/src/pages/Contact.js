@@ -46,7 +46,10 @@ const About = () => {
                 alert("message envoyé");
             })
             .catch((error) => {
-                console.error(error);
+                alert(
+                    "Erreur! Je n'ai sûrement pas configuré le serveur backend, veuillez m'envoyer un mail à l'adresse suivante : claretdamien@gmail.com"
+                );
+                console.log(error);
             });
     };
     const handleChangeAuthor = (e) => {

@@ -2,6 +2,7 @@
 
 .Experiences  {
     margin-top: 300px;
+    height: 700px;
 }
 h2 {
     margin-bottom: 100px;
@@ -10,16 +11,32 @@ h2 {
     font-size: 2em;
     font-family: 'Montserrat';
 }
-.cleather {
+.container {
+    margin-bottom: 40px;
     height: 200px;
     width: 400px;
-    background-color: #0277bd;
     display: flex;
     justify-content: center;
     text-align: center;
     flex-direction: column;
 }
+#cleather {
+    background-color: #0277bd;
+}
+#games {
+    background-color: #e34f26;
+}
 
+@media all and (max-width: 1080px) {
+    .projects { 
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: space-around;
+        align-items: center;
+        align-content: stretch;
+    }
+  }
 .projects {
     display: flex;
     justify-content: space-around;
