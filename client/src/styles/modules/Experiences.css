@@ -1,15 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap');
 
 .Experiences  {
-    margin-top: 300px;
+    margin-top: 100px;
     height: 700px;
-}
-h2 {
-    margin-bottom: 100px;
-    display: flex;
-    justify-content: center;
-    font-size: 2em;
-    font-family: 'Montserrat';
 }
 .container {
     margin-bottom: 40px;

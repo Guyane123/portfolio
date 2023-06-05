@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import "../styles/pages/Home.css";
-import "../styles/modules/Competences.css";
+import "../../styles/pages/Home.css";
+import "../../styles/modules/Competences.css";
 import Nodejs from "./Nodejs";
 import TReact from "./TReact";
 import HTML from "./HTML";

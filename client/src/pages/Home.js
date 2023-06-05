@@ -3,7 +3,7 @@ import "../styles/pages/Home.css";
 import Moi from "../modules/Moi";
 import Marquee from "../modules/Marquee";
 import "css-doodle";
-import Competences from "../modules/Competences";
+import Competences from "../modules/langages/Competences";
 import Experiences from "../modules/Experiences";
 
 const Home = () => {
@@ -56,7 +56,7 @@ const Home = () => {
                     <li>
                         <div className="pfp pfp4"></div>
                         <div className="message blackMessage  message4" id="m4">
-                            J'aimerais être un dév.
+                            J'aimerais être un développeur.
                         </div>
                     </li>
                 </ul>

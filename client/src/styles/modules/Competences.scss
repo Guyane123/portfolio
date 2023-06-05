@@ -27,6 +27,7 @@ h2 {
     background-color: white;
     height: 500px;
     display: grid;
+    position: relative;
     grid-template-columns: 1fr 1fr 1fr;
 }
 @media (max-width: 800px) {
@@ -89,3 +90,20 @@ h2 {
     height: 100px;
     width: 75px;
 }
+@media (max-width: 800px) {
+    #nodejs {
+        background-size: 130px;
+    }
+    #react {
+        background-size: 150px;
+    }
+    #javascript {
+        background-size: 70px;
+    }
+    #css {
+        background-size: 70px;
+    }
+    #html {
+        background-size: 50px;
+    }
+  }

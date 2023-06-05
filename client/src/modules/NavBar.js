@@ -38,9 +38,13 @@ const NavBar = () => {
         document.body.classList.toggle("blackMode");
         const message = document.querySelectorAll(".message");
         const langages = document.getElementById("lan");
-        if (langages) {
-            langages.classList.toggle("blackMode");
-        } else {
+        checkIfLoaded(langages);
+        checkIfLoaded(document.getElementById("Experience"));
+        function checkIfLoaded(element) {
+            if (element) {
+                element.classList.toggle("blackMode");
+            } else {
+            }
         }
         if (message) {
             message.forEach((e) => {
