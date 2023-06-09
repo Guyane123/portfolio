@@ -1,7 +1,7 @@
 const GoUp = () => {
     function handleClick(e) {
-        // e.preventDefault();
         window.scrollTo(0, 0, 200);
+        // document.body.animate({ scrollTop: 0 }, 500);
     }
 
     return (

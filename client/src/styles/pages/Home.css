@@ -160,7 +160,7 @@
   display: inline-block;
   animation: scrolling-left1 20s linear infinite;
 }
-.Biographie .marquee span:nth-child(5) {
+.Biographie .marquee span:nth-child(2) {
   color: rgb(255, 200, 60);
 }
 .Biographie .marquee2 {
@@ -171,7 +171,7 @@
   animation: scrolling-left2 20s linear infinite;
   animation-delay: 10s;
 }
-.Biographie .marquee2 span:nth-child(3) {
+.Biographie .marquee2 span:nth-child(4) {
   color: rgb(255, 200, 60);
 }
 
@@ -362,4 +362,83 @@
 }
 .yellowTest {
   color: rgb(255, 200, 60);
+}
+
+.moduleText {
+  background-color: rgba(239, 239, 239, 0.5);
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleText {
+  font-size: 1.5em;
+  text-decoration: underline;
+  margin-right: 50px;
+}
+
+.text {
+  margin-top: 20px;
+  font-size: 1.2em;
+  text-align: justify;
+  margin-right: 50px;
+  width: 600px;
+}
+
+#illustration {
+  background-image: url("../../media/phone.svg");
+  background-repeat: no-repeat;
+  background-size: 400px;
+  height: 400px;
+  width: 400px;
+  position: relative;
+  float: left;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn {
+  background-color: rgb(255, 200, 60);
+}
+
+.btn {
+  margin-top: 20px;
+  font-size: 1.2em;
+  position: relative;
+  margin-bottom: 20px;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: space-around;
+  height: 50px;
+  width: 600px;
+  cursor: pointer;
+  border-radius: 5px;
+  color: white;
+  background-color: rgb(255, 200, 60);
+}
+
+@media (max-width: 1080px) {
+  .moduleText {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 900px;
+  }
+  .text {
+    width: auto;
+  }
+}
+.fadeIn {
+  opacity: 0;
+  transition: opacity 2s ease-in;
+}
+
+.fadeIn.visible {
+  opacity: 1;
 }/*# sourceMappingURL=Home.css.map */

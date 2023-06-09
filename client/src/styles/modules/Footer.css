@@ -25,11 +25,11 @@
     align-items: center;
     margin-bottom: 20px;
 }
-a{
+#about, #contact{
     color: white;
     text-decoration: none;
 }
-a:hover {
+#about:hover, #contact:hover{
     animation-name: onMouseHover;
     animation-duration: 0.3s;
 }

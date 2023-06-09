@@ -5,6 +5,7 @@ import Marquee from "../modules/Marquee";
 import "css-doodle";
 import Competences from "../modules/langages/Competences";
 import Experiences from "../modules/Experiences";
+import ModuleText from "../modules/ModuleText";
 
 const Home = () => {
     useEffect(() => {
@@ -63,6 +64,7 @@ const Home = () => {
                 <Moi />
             </div>
             <Marquee />
+            <ModuleText />
             <Competences />
             <Experiences />
             <css-doodle click-to-update>
