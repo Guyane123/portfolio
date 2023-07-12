@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+
+:root {
+    --main: rgb(22, 22, 30);
+    --secondary: #313552;
+    --thirdary: #5396e7;
+    --fourthary: rgb(42, 46, 94);
+    --hot-color: rgba(255, 197, 118, 0.9);
+    --main-light: white;
+    --secondary-light: rgb(216, 216, 216, 0.8);
+}
+#root {
+    overflow-x: hidden;
+}
+body {
+    overflow-x: hidden;
+    margin: 100px 20px 0px 20px;
+    font-family: "inter", sans-serif;
+    font-weight: 500;
+    font-size: 1em;
+    color: white;
+    background-color: var(--main);
+}
+.body-light {
+    background-color: var(--main-light);
+    color: black;
+}
+.body-light .message-item {
+    background-color: var(--secondary-light);
+}
+a {
+    color: white;
+    text-decoration: none;
+}
+.body-light a {
+    color: black;
+}
+.body-light .input > label {
+    color: black;
+    background-color: var(--secondary-light);
+}
+.body-light .langages-item {
+    color: black;
+    background-color: var(--secondary-light);
+}
+.body-light .nav-container {
+    color: black;
+    background-color: var(--secondary-light);
+}
+.body-light .ToTop {
+    color: black;
+    background-color: var(--secondary-light);
+}
+.body-light p {
+    color: rgb(88, 88, 88);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.title {
+    font-family: "Playfair Display", serif;
+    font-weight: 700;
+    text-align: center;
+    color: var(--hot-color);
+    font-size: 2em;
+    margin-top: 200px;
+    margin-bottom: 40px;
+}

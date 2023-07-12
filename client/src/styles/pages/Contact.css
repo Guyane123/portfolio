@@ -1,98 +1,48 @@
-body {
-  z-index: 10;
-}
-
-.contactInputs .required {
-  color: red;
-}
-.contactInputs label {
-  display: block;
-  float: none;
-  width: auto;
-  font-weight: 500;
-  line-height: 20px;
-  padding-top: 0;
-  margin-bottom: 9px;
-  margin-top: 9px;
-  font-family: "Helveti";
-}
-.contactInputs .input {
-  height: 50px;
-  width: 300px;
-  margin-right: 20px;
-}
-.contactInputs #message {
-  margin-bottom: 32px;
-  width: 300px;
-  height: 150px;
-}
-.contactInputs #submit {
-  line-height: 0px;
-  -webkit-appearance: none;
-     -moz-appearance: none;
-          appearance: none;
-  cursor: pointer;
-  border: 0px none;
-  border-radius: 5px;
-  padding: 20px 20px;
-  color: white;
-  background-color: rgb(255, 200, 60);
-}
-
-#card {
-  height: 400px;
-  width: 40%;
-  position: relative;
-  min-width: 200px;
-  margin-right: 20px;
-  margin-bottom: 100px;
-  max-width: 500px;
-  background-color: rgb(255, 200, 60);
-  border-radius: 10px;
-  z-index: 0;
-}
-#card #circle {
-  transform: translate(-50%);
-  transform: translate(-50%, -50%);
-  z-index: -1;
-  position: absolute;
-  background-color: rgb(245, 190, 50);
-  height: 80px;
-  width: 80px;
-  border-radius: 900px;
-}
-#card .block {
-  z-index: 0;
-  margin: 20px;
-}
-#card .block h3 {
-  margin-bottom: 50px;
-}
-#card .block p {
-  margin-bottom: 10px;
-}
-#card .block h4 {
-  margin-top: 100px;
-}
-
 .Contact {
-  z-index: 0;
-  display: flex;
-  justify-content: space-around;
+    background-color: var(--fourthary);
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 75%;
+}
+.title {
+    margin-top: 0px!important;
+}
+.Fields {
+    display: flex;
+    margin-top: -1em;
+    height: 100%;
+    flex-direction: column;
+}
+form {
+    display: flex;
+    position: relative;
+    justify-content: space-evenly;
+}
+label[for=message] {
+    position: absolute;
+}
+#message {
+    margin: 0px;
+    padding: 0px;
+    height: 200%;
+}
+.message-container {
+
+    margin-top: -1em;
+    height: inherit;
 }
 
-@media (max-width: 1080px) {
-  .Contact {
-    z-index: 0;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
-    align-items: center;
-    align-content: stretch;
-  }
-  #card {
-    margin: 0px;
-    margin-bottom: 100px;
-  }
-}/*# sourceMappingURL=Contact.css.map */
+@media only screen and (max-width: 800px) {
+
+    form {
+        padding: 10px;
+        display: flex;
+        position: relative;
+        flex-direction: column!important;
+    }
+    label[for=message] {
+        position: relative;
+    }
+
+}

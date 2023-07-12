@@ -1,183 +1,158 @@
-.NavBar {
-  z-index: 99999999;
-  background-color: rgba(0, 0, 0, 0.5);
+nav {
+    z-index: 10;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: var(--secondary);
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
 }
-.NavBar ul {
-  margin-top: 10px;
-  display: flex;
-  float: right;
-  text-decoration: none;
+nav>div>.nav-container>ul>li {
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
 }
-.NavBar ul li {
-  padding: 0px 50px 0px 0px;
-  list-style-type: none;
-  display: inline;
-  animation-duration: 2s;
-  animation-name: slideinright;
+nav>div>.nav-container>ul>li>a {
+    transition: color 0.4s ease-in-out;
 }
-.NavBar ul a:hover {
-  text-decoration: underline;
-}
-.NavBar ul a {
-  text-decoration: none;
-  color: white;
-}
-
-.Responsive-NavBar {
-  width: 100%;
-  background-color: black;
-  height: 60px;
-  position: fixed;
-  z-index: 10;
-}
-.Responsive-NavBar a {
-  text-decoration: none;
-  color: white;
-  padding: 50px;
-  display: flex;
-  color: black;
-}
-.Responsive-NavBar li {
-  list-style-type: none;
-  padding-top: 20px;
-}
-.Responsive-NavBar ul {
-  display: flex;
-  flex-direction: column;
-}
-.Responsive-NavBar a:hover {
-  text-decoration: none;
-  color: rgb(73, 73, 73);
+nav>div>.nav-container>ul>li>a:hover {
+    color: var(--thirdary)
 }
 
-.hidden {
-  display: none;
+@media only screen and (min-width: 800px) {
+
+    #nav-burger {
+        display: none;
+    } 
+    nav {
+    z-index: 10;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: var(--secondary);
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    }
+
+
+    nav>ul>li {
+    display: inline;
+    margin-right: 20px;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+    }
+    nav>ul>li>a {
+    transition: color 0.4s ease-in-out;
+    }  
+    nav>ul>li>a:hover {
+    color: var(--thirdary)
+    }
+
+}
+@media only screen and (max-width: 800px) {
+    @keyframes slideFromTop {
+        from{
+            padding-top: 0px;
+            height: 0px;
+        }to{
+            padding-top: 200px;
+            height: 300px;
+        }
+    }
+    nav {
+        align-items: center;
+    }
+    #nav-burger {
+        font-size: 2em;
+        transition: color 0.2s ease-out 100ms;
+        color: white;
+        display: block;
+        margin-right: 20px;
+        user-select: none;
+    }
+    #nav-burger:hover {
+        cursor: pointer;
+        color: var(--thirdary);
+    }
+    nav>div>div>ul>li>a:hover {
+        color: var(--thirdary);
+    }
+    nav>div>div>ul>.nav-item {
+        transition: color .4s ease-out 100ms;
+        opacity: 0%;
+        animation: appear 0.5s ease-out forwards;
+        animation-delay: 0.5s;
+    }
+    /* .nav-item {
+        animation: appear 0.5s ease-out forwards;
+    } */
+    @keyframes appear {
+        from{
+            opacity: 0%;
+        }to {
+            opacity: 100%;
+        }
+    }
+    .nav-container {
+        display: none;
+        width: 100%;
+        left: 0px;
+        position: absolute;
+        background-color: var(--secondary);
+        text-align: center;
+    }
+    nav>div>div>ul>li {
+        margin-top: 20px;
+    }
+    nav>div>div>ul {
+        padding-left: 0px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        
+    }
+}
+.nav-list {
+    display: flex;
+    align-items: center;
+}
+.material-symbols-outlined {
+    font-size: 1em;
+    margin-right: 5px;
+    position: relative;
+    bottom: -2px;
+    color: var(--thirdary)
+}
+.visible1 {
+    animation: slideFromTop 0.8s ease-in-out forwards;
+    display: block;
 }
 
-#burgerID {
-  color: black;
+
+.changeThemeButton {
+    height: 20px;
+    width: 20px;
+    border: var(--thirdary) solid 4px;
+    background-color: white;
+    border-radius: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+}
+.changeThemeButton:hover {
+    cursor: pointer;
+}
+.mode {
+    margin-right: 0px;
 }
 
-.burger {
-  animation-duration: 1s;
-  animation-name: slideinright2;
-  animation-name: pulse;
-  animation-duration: 1s;
-  position: absolute;
-  margin-left: 10px;
-  margin-top: 5px;
-  height: 50px;
-  width: 50px;
-  border-radius: 10px;
-  background-color: rgb(255, 255, 255);
+.nav-light {
+    background-color: var(--secondary-light);
+    color: black;
 }
-.burger h2 {
-  position: absolute;
-  font-size: 12px;
-  top: 25%;
-  left: 50%;
-  transform: translateX(-50%);
-}
-
-.colorContainer {
-  height: 20px;
-  width: 50px;
-  border: rgb(255, 200, 60) solid 4px;
-  background-color: white;
-  border-radius: 100px;
-}
-
-.colorContainer:hover {
-  cursor: pointer;
-}
-
-.sun {
-  background-color: rgb(255, 255, 255);
-  height: 20px;
-  width: 20px;
-  border-radius: 900px;
-  animation-name: slidewhite;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-.moon {
-  border-radius: 200px;
-  height: 16px;
-  width: 16px;
-  border: 2px solid black;
-  background-color: rgb(255, 255, 255);
-  animation-name: slideblack;
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes slideblack {
-  from {
-    background-color: black;
-    transform: translateX(0%);
-  }
-  to {
-    transform: translateX(150%);
-  }
-}
-@keyframes slidewhite {
-  from {
-    background-color: rgb(255, 255, 255);
-    transform: translateX(125%);
-  }
-  to {
-    background-color: rgb(0, 0, 0);
-    transform: translateX(-5%);
-  }
-}
-#responsivecontent-container {
-  animation-name: slideinleft;
-  animation-duration: 0.5s;
-  position: fixed;
-  width: 65vw;
-  height: 100vh;
-  margin-bottom: 100px;
-  margin-left: -12px;
-  margin-top: 60px;
-  border-top: 0px;
-  background-color: white;
-  z-index: 100000000000000000000000000;
-}
-
-@keyframes slideinright {
-  from {
-    opacity: 0%;
-    transform: translateX(100%);
-  }
-  to {
-    opacity: 100%;
-    transform: translateX(0%);
-  }
-}
-@keyframes slideinright2 {
-  from {
-    opacity: 0%;
-    transform: translateX(500%);
-  }
-  to {
-    opacity: 100%;
-    transform: translateX(0%);
-  }
-}
-@keyframes slideinleft {
-  from {
-    transform: translateX(-100%);
-  }
-  to {
-    transform: translateX(0%);
-  }
-}
-@keyframes pulse {
-  from {
-    border: 4px solid rgba(255, 255, 255, 0.1);
-  }
-  to {
-    border: 2px solid rgb(255, 255, 255);
-  }
-}/*# sourceMappingURL=NavBar.css.map */
