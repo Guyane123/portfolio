@@ -1,4 +1,115 @@
+
+@media only screen and (max-width: 800px) {
+    #nav-burger {
+        display: block!important;
+
+        display: flex!important;
+        align-items: center!important;
+        justify-content: center!important;
+        margin-right: 20px;
+    }
+    #nav-burger span {
+        font-size: 2em;
+    }
+    #nav-burger:hover {
+        cursor: pointer;
+    }
+    .nav-container {
+        background-color: var(--secondary);
+        margin-top: 50px;
+        display: none;
+        width: 100%!important;
+        left: 0px!important;
+        position: absolute!important;
+        text-align: center!important;
+    }
+    .nav-container ul{
+        flex-direction: column;
+        align-items: center;
+    }
+    .nav-item {
+        opacity: 0%;
+        animation: appear 0.5s ease-out forwards;
+        animation-delay: 0.5s;
+    } 
+    @keyframes appear {
+        from{
+            opacity: 0%;
+        }to {
+            opacity: 100%;
+        }
+    }
+    @keyframes slideFromTop {
+        from{
+            padding-top: 0px;
+            height: 0px;
+        }to{
+            padding-top: 200px;
+            height: 300px;
+        }
+    }
+
+    
+    .visible1 {
+        animation: slideFromTop 0.8s ease-in-out forwards;
+        display: block;
+    }
+}
+#nav-burger {
+    display: none;
+}
 nav {
+    z-index: 10;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    background-color: var(--secondary);
+    width: 100vw;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+.nav-container ul{
+    position: relative;
+    display: flex;
+}
+.nav-container li {
+    margin: 0px 20px;
+}
+.nav-container .nav-item, a {
+    transition: color 0.3s ease-in-out;
+}
+.nav-container .nav-item:hover, a:hover {
+    color: var(--thirdary)!important;
+    cursor: pointer;
+}
+ul .material-symbols-outlined {
+    font-size: 1em;
+    margin-right: 5px;
+    position: relative;
+    bottom: -2px;
+    color: var(--thirdary)
+}
+.nav-light {
+    background-color: var(--secondary-light);
+}
+.mode {
+    color: var(--hot-color)!important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* nav {
     z-index: 10;
     position: fixed;
     top: 0px;
@@ -90,7 +201,7 @@ nav>div>.nav-container>ul>li>a:hover {
     }
     /* .nav-item {
         animation: appear 0.5s ease-out forwards;
-    } */
+    } 
     @keyframes appear {
         from{
             opacity: 0%;
@@ -155,4 +266,6 @@ nav>div>.nav-container>ul>li>a:hover {
 .nav-light {
     background-color: var(--secondary-light);
     color: black;
-}
+} */
+
+

@@ -4,6 +4,30 @@ import "../styles/pages/Home.css";
 import LangagesComponent from "../modules/Langages";
 import ProjectsComponent from "../modules/Projects";
 
+class Intro extends React.Component {
+    render(): React.ReactNode {
+        return (
+            <>
+                <h2 className="title">Introduction</h2>
+                <div className="intro-container">
+                    <div className="meImg"></div>
+                    <p>
+                        <span>«_</span>Passionné de programmation, je suis
+                        constamment animé par le désir de perfectionner mes
+                        compétences et de me surpasser. Fort d'une expérience
+                        solide, je suis capable de mener des projets de la
+                        conception à la réalisation. Mon engagement et ma
+                        détermination sont les moteurs qui me poussent à
+                        explorer de nouvelles opportunités et à repousser
+                        constamment mes limites dans le domaine de la
+                        programmation. <span>_»</span>
+                    </p>
+                </div>
+            </>
+        );
+    }
+}
+
 const MessageComponent = ({ message }: { message: string | ReactNode }) => {
     return <div className="message-item">{message}</div>;
 };
@@ -71,6 +95,7 @@ class Home extends React.Component {
                     <Messages />
                     <Github />
                 </div>
+                <Intro />
                 <div className="langages-wrapper">
                     <LangagesComponent />
                 </div>

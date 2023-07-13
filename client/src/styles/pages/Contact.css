@@ -1,11 +1,8 @@
 .Contact {
-    background-color: var(--fourthary);
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 75%;
+    background-color: var(--secondary);
+    padding-bottom: 200px;
 }
-.title {
+.Contact .title {
     margin-top: 0px!important;
 }
 .Fields {
@@ -15,24 +12,50 @@
     flex-direction: column;
 }
 form {
+    flex-wrap:wrap;
     display: flex;
     position: relative;
     justify-content: space-evenly;
 }
-label[for=message] {
-    position: absolute;
+input {
+    background-color: var(--secondary);
+    border: 2px solid white;
+    overflow: hidden;
+    padding: 16px;
+    width: 300px;
+    color: white;
+    outline: none;
+}
+input:focus {
+    border: var(--hot-color) 2px solid;
 }
 #message {
+    width: 130%;
     margin: 0px;
+    border: 2px solid white;
     padding: 0px;
-    height: 200%;
+    height: 100%;
+    margin-top: -1.4em;
 }
-.message-container {
-
-    margin-top: -1em;
-    height: inherit;
+.message-container div {
+    height: 100%;
 }
-
+.btn {
+    position: relative;
+    margin-top: 40px;
+    left: 17%;
+}
+.btn button:hover {
+    cursor: pointer;
+}
+.btn button {
+    background-color: var(--hot-color);
+    border: none;
+    width: 150px;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+}
 @media only screen and (max-width: 800px) {
 
     form {

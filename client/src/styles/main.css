@@ -1,5 +1,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');
+
+
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+  
+::-webkit-scrollbar-track {
+    background: var(--primary);
+}
+  
+::-webkit-scrollbar-thumb {
+    background: var(--fourthary);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
 
 :root {
     --main: rgb(22, 22, 30);
@@ -15,7 +36,7 @@
 }
 body {
     overflow-x: hidden;
-    margin: 100px 20px 0px 20px;
+    margin: 250px 20px 0px 20px;
     font-family: "inter", sans-serif;
     font-weight: 500;
     font-size: 1em;
@@ -44,16 +65,15 @@ a {
     color: black;
     background-color: var(--secondary-light);
 }
-.body-light .nav-container {
-    color: black;
-    background-color: var(--secondary-light);
-}
 .body-light .ToTop {
     color: black;
     background-color: var(--secondary-light);
 }
 .body-light p {
     color: rgb(88, 88, 88);
+}
+.body-light .nav-container {
+    background-color: var(--secondary-light);
 }
 
 ul {

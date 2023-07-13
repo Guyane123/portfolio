@@ -11,7 +11,7 @@ type FieldProps = {
 const Field = ({ name, value, children, onChange }: FieldProps) => {
     return (
         <div>
-            <label htmlFor={name}>{children}</label>
+            {/* <label htmlFor={name}>{children}</label> */}
             <br />
             <input
                 placeholder={name}
@@ -79,6 +79,9 @@ class Contact extends React.Component<any, any> {
                         >
                             Email
                         </Field>
+                        <div className="btn">
+                        <button> Envoyer </button>
+                    </div>
                     </div>
                     <div className="message-container">
                         <Field
@@ -89,9 +92,6 @@ class Contact extends React.Component<any, any> {
                             Message
                         </Field>
                     </div>
-                <div className="btn">
-                    <button> Envoyer </button>
-                </div>
                 </form>
             </div>
         );

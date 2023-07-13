@@ -83,6 +83,7 @@ li {
     width: 50px;
 }
 .github {
+    text-align: center;
     font-size: 2em;
     font-weight: 800;
 }
@@ -142,9 +143,10 @@ li {
     background-image: url("../../assets/langages/React.svg");
 }
 .langagesLogo {
+    background-position: center;
     width: 100px;
     height: 100px;
-    background-size: 100px 100px;
+    background-size: 100px 100px;  
 }
 @media only screen and (max-width: 940px) {
     .langagesLogo {
@@ -152,6 +154,7 @@ li {
         height: 80px;
         background-repeat: no-repeat;
         background-size: 100%;
+        background-position: center;
         margin-right: 20px;
     }
     .langages-item {
@@ -166,14 +169,24 @@ li {
 @media only screen and (min-width: 940px) {
     .langages-item {
         max-width: 100px;
-        min-width: 400px;
+        min-width: 500px;
+    }
+}
+@media only screen and (max-width: 340px) {
+    .input > label {
+        padding: 0px!important;
+    }
+    .title {
+        margin-top: 1500px!important;
     }
 }
 .langages-item {
-    background-color: rgb(34, 36, 77);
+    margin-right: 10px;
+    background-color: var(--secondary);
     margin-top: 100px;
     padding: 20px 20px;
-    border: var(--fourthary) solid 2px;
+    border-radius: 10px;
+    /* box-shadow: 2px 3px 5px 0px var(--fourthary); */
     transition: color 0.2s ease-in-out 100ms, border 0.2s ease-in-out 100ms;
     display: flex;
     justify-content: space-around;
@@ -216,7 +229,7 @@ input[type="radio"] {
     transition: color 0.2s ease-in-out 100ms, border 0.2s ease-in-out 100ms;
     left: 200%;
     border: transparent solid 2px;
-    background-color: var(--fourthary);
+    background-color: var(--secondary);
     padding: 8px 10px;
     border-radius: 2px;
 }
@@ -231,4 +244,59 @@ a {
 
 p {
     color: #d4dcff;
+}
+
+
+@media only screen and (max-width: 940px) {
+    .meImg {
+        height: 150px!important;
+        width: 150px!important;
+    }
+    .intro-container {
+        flex-direction: column;
+    }
+
+}
+
+
+.intro-container {
+    overflow-x: hidden;
+    position: absolute;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    margin-left: -20px!important;
+    width: 100vw;
+    padding: 120px 0px;
+    background-color: var(--secondary);
+}
+
+.meImg {
+    margin-left: 20px;
+    flex-shrink: 0;
+    margin-right: 20px;
+    background-image: url(../../assets/pfp.png);
+    border: var(--hot-color) solid 2px;
+    width: 300px;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 300px;
+}
+.intro-container p {
+    margin-left: 20px;
+    font-size: 1.5em;
+    font-family: 'Lato', sans-serif;
+    max-width: 500px;
+    color: white!important;
+    text-align: justify;
+    margin-right: 20px;
+}
+.intro-container span {
+    font-size: 1.4em;
+    font-style: italic;
+    color: var(--hot-color);
+}
+
+.langages-wrapper {
+    margin-top: 860px;
 }

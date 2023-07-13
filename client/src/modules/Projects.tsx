@@ -1,6 +1,7 @@
 import React from "react"
 import carousel from "../utils/carousel";
 import '../styles/modules/Projetcs.css'
+import "../assets/Cleather.png"
 
 interface ProjectsItemProps {
     img: string;
@@ -21,8 +22,8 @@ class ProjectsItem extends React.Component<ProjectsItemProps> {
         return (
             <div className="items">
                 <div
-                    className="img"
-                    style={{ backgroundImage: `url(${this.img})` }}
+                    className={`${this.img} img`}
+                    // style={{ backgroundImage: `url(${this.img})` }}
                 ></div>
                 <div className="desc">{this.desc}</div>
             </div>
@@ -50,11 +51,11 @@ class ProjectsComponent extends React.Component<unknown, unknown> {
                 <div className="carousel1">
                     <ProjectsItem
                         desc="Cleather permet de consulter la météo et la température d'une ville"
-                        img="https://picsum.photos/601/500"
+                        img={"cleather"}
                     />
                     <ProjectsItem
                         desc="Ce portolio"
-                        img="https://picsum.photos/600/500"
+                        img={"portfolio"}
                     />
                 </div>
             </>
