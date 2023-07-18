@@ -3,13 +3,12 @@ import { Link } from "react-router-dom";
 import "../styles/modules/Navbar.css";
 import "../styles/main.css";
 import ThemeContext from "./Context/ThemeContext.tsx";
-import { useCallback, useContext, useEffect, useRef, useState } from "react";
+import { useCallback, useContext, useRef } from "react";
 import "../App.tsx";
 
 const Navbar = function () {
     const { handleThemeChange, theme } = useContext(ThemeContext);
     const className = "nav-" + theme;
-    const w = useRef(window.innerWidth);
     const span = useRef<HTMLSpanElement>(null);
 
     const handleBurgerClick = useCallback(function () {
@@ -48,7 +47,7 @@ const Navbar = function () {
                                     Accueil
                                 </Link>
                             </li>
-                            <li
+                            {/* <li
                                 className="nav-item"
                                 onClick={handleBurgerClick}
                             >
@@ -58,7 +57,7 @@ const Navbar = function () {
                                     </span>
                                     A propos
                                 </Link>
-                            </li>
+                            </li> */}
                             <li
                                 className="nav-item"
                                 onClick={handleBurgerClick}

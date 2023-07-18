@@ -1,7 +1,8 @@
-import React from "react"
+import React from "react";
 import carousel from "../utils/carousel";
-import '../styles/modules/Projetcs.css'
-import "../assets/Cleather.png"
+import "../styles/modules/Projetcs.css";
+import "../assets/Cleather.png";
+import { Link } from "react-router-dom";
 
 interface ProjectsItemProps {
     img: string;
@@ -20,13 +21,15 @@ class ProjectsItem extends React.Component<ProjectsItemProps> {
 
     render(): React.ReactNode {
         return (
-            <div className="items">
-                <div
-                    className={`${this.img} img`}
-                    // style={{ backgroundImage: `url(${this.img})` }}
-                ></div>
-                <div className="desc">{this.desc}</div>
-            </div>
+            <Link to={`./project/${this.img}`}>
+                <div className="items">
+                    <div
+                        className={`${this.img} img`}
+                        // style={{ backgroundImage: `url(${this.img})` }}
+                    ></div>
+                    <div className="desc">{this.desc}</div>
+                </div>
+            </Link>
         );
     }
 }
@@ -53,15 +56,11 @@ class ProjectsComponent extends React.Component<unknown, unknown> {
                         desc="Cleather permet de consulter la météo et la température d'une ville"
                         img={"cleather"}
                     />
-                    <ProjectsItem
-                        desc="Ce portolio"
-                        img={"portfolio"}
-                    />
+                    <ProjectsItem desc="Ce portolio" img={"portfolio"} />
                 </div>
             </>
         );
     }
 }
 
-
-export default ProjectsComponent
+export default ProjectsComponent;

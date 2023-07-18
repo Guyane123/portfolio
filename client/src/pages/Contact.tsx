@@ -8,12 +8,12 @@ type FieldProps = {
     onChange: (e: any) => void;
 };
 
-const Field = ({ name, value, children, onChange }: FieldProps) => {
+const Field = ({ name, value, onChange }: FieldProps) => {
     return (
         <div>
-            {/* <label htmlFor={name}>{children}</label> */}
             <br />
             <input
+                required
                 placeholder={name}
                 id={name}
                 name={name}
@@ -28,8 +28,8 @@ class Contact extends React.Component<any, any> {
     constructor(props: null) {
         super(props);
         this.state = {
-            email: "",
-            message: "",
+            Courriel: "",
+            Message: "",
         };
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
@@ -42,7 +42,7 @@ class Contact extends React.Component<any, any> {
         e.preventDefault();
         var mailformat = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
         const data = JSON.stringify(this.state);
-        if (this.state.email.match(mailformat)) {
+        if (this.state.Courriel.match(mailformat)) {
             console.log(data);
         } else {
             alert("err");
@@ -50,10 +50,8 @@ class Contact extends React.Component<any, any> {
         }
     }
     handleChange(e: any) {
-        console.log(e);
         const name = e.target.name;
-        const type = e.target.type;
-        const value = type === "text" ? e.target.value : null;
+        const value = e.target.value;
         this.setState({
             [name]: value,
         });
@@ -61,39 +59,44 @@ class Contact extends React.Component<any, any> {
 
     render() {
         return (
-            <div className="Contact modules">
-                <h1 className="title">Me contacter</h1>
-                <form onSubmit={this.handleSubmit}>
-                    <div className="Fields">
-                        <Field
-                            name="Prénom"
-                            value={this.state.name}
-                            onChange={this.handleChange}
-                        >
-                            Prénom
-                        </Field>
-                        <Field
-                            name="email"
-                            value={this.state.email}
-                            onChange={this.handleChange}
-                        >
-                            Email
-                        </Field>
-                        <div className="btn">
-                        <button> Envoyer </button>
-                    </div>
-                    </div>
-                    <div className="message-container">
-                        <Field
-                            name="message"
-                            value={this.state.name}
-                            onChange={this.handleChange}
-                        >
-                            Message
-                        </Field>
-                    </div>
-                </form>
-            </div>
+            <>  
+                <h2 className="title ch1">Me contacter</h2>
+                <div className="Contact modules">
+                    <form onSubmit={this.handleSubmit}>
+                        <div className="message-container">
+                            <textarea
+                                name="Message"
+                                required
+                                placeholder="Message"
+                                id="message"
+                                cols={30}
+                                value={this.state.name}
+                                onChange={this.handleChange}
+                                rows={10}
+                            ></textarea>
+                        </div>
+                        <div className="Fields">
+                            <Field
+                                name="Prénom"
+                                value={this.state.name}
+                                onChange={this.handleChange}
+                            >
+                                Prénom
+                            </Field>
+                            <Field
+                                name="Courriel"
+                                value={this.state.name}
+                                onChange={this.handleChange}
+                            >
+                                Couriel
+                            </Field>
+                            <div className="btn">
+                                <button> Envoyer </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </>
         );
     }
 }

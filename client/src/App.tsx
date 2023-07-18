@@ -5,7 +5,8 @@ import Contact from "./pages/Contact";
 import Home from './pages/Home'
 import NavBar from "./modules/Navbar";
 import ToTop from "./modules/ToTop";
-import {useState } from "react";
+import { useState } from "react";
+import CleatherProj from "./pages/projects/CleatherProj"
 
 function App() {
 
@@ -30,6 +31,7 @@ function App() {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="contact" element={<Contact />} />
+                <Route path="/project/:id" element={<CleatherProj />} />
             </Routes>
                 <ToTop />
             </div>

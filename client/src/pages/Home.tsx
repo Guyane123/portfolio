@@ -3,6 +3,10 @@ import "../assets/langages/HTML.svg";
 import "../styles/pages/Home.css";
 import LangagesComponent from "../modules/Langages";
 import ProjectsComponent from "../modules/Projects";
+import scrollTo  from 'scroll-to'
+import '../styles/modules/ToTop.css'
+import { useEffect } from 'react';
+
 
 class Intro extends React.Component {
     render(): React.ReactNode {
@@ -12,7 +16,7 @@ class Intro extends React.Component {
                 <div className="intro-container">
                     <div className="meImg"></div>
                     <p>
-                        <span>«_</span>Passionné de programmation, je suis
+                        <span>«</span>Passionné de programmation, je suis
                         constamment animé par le désir de perfectionner mes
                         compétences et de me surpasser. Fort d'une expérience
                         solide, je suis capable de mener des projets de la
@@ -20,7 +24,8 @@ class Intro extends React.Component {
                         détermination sont les moteurs qui me poussent à
                         explorer de nouvelles opportunités et à repousser
                         constamment mes limites dans le domaine de la
-                        programmation. <span>_»</span>
+                        programmation. <span>»</span>
+                        <span className="cursor">|</span>
                     </p>
                 </div>
             </>
@@ -33,6 +38,19 @@ const MessageComponent = ({ message }: { message: string | ReactNode }) => {
 };
 
 const Messages = () => {
+    let langages = document.querySelector(".langages-wrapper")
+    let rect = langages?.getBoundingClientRect()
+
+    useEffect(() => {
+        langages = document.querySelector(".langages-wrapper")
+        rect = langages?.getBoundingClientRect()
+    }, [])
+
+
+    function handleClick() {
+        scrollTo(0, rect ? rect.height + 300 : 1200, {ease: "linear", duration: 600 });
+    }
+
     return (
         <ul className="message-list">
             <li>
@@ -59,7 +77,11 @@ const Messages = () => {
                         message={
                             <h2>
                                 Je suis passioné par le{" "}
-                                <span className="thirdary">
+                                <span
+                                    style={{cursor:"pointer"}}
+                                    className="thirdary"
+                                    onClick={handleClick}
+                                >
                                     développement web
                                 </span>
                             </h2>

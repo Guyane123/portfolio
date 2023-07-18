@@ -2,48 +2,49 @@
     background-color: var(--secondary);
     padding-bottom: 200px;
 }
-.Contact .title {
-    margin-top: 0px!important;
-}
 .Fields {
     display: flex;
     margin-top: -1em;
-    height: 100%;
+    height: 120%;
     flex-direction: column;
 }
 form {
+    padding-top: 100px;
     flex-wrap:wrap;
     display: flex;
     position: relative;
     justify-content: space-evenly;
 }
-input {
-    background-color: var(--secondary);
+.ch1 {
+    margin-top: 0px!important;
+}
+#message {
+    position: relative;
+    height: 90%;
+}
+input, #message {
+    font-family: Inter;
+    background-color: transparent!important;
     border: 2px solid white;
     overflow: hidden;
     padding: 16px;
-    width: 300px;
+    max-width: 300px;
+    min-width: 300px;
     color: white;
     outline: none;
 }
-input:focus {
+input:focus, #message:focus {
     border: var(--hot-color) 2px solid;
 }
-#message {
-    width: 130%;
-    margin: 0px;
-    border: 2px solid white;
-    padding: 0px;
-    height: 100%;
-    margin-top: -1.4em;
+input::selection, #message::selection {
+    background-color: var(--hot-color);
 }
-.message-container div {
-    height: 100%;
-}
+
 .btn {
     position: relative;
     margin-top: 40px;
-    left: 17%;
+    display: flex;
+    justify-content: space-around;
 }
 .btn button:hover {
     cursor: pointer;
@@ -64,8 +65,23 @@ input:focus {
         position: relative;
         flex-direction: column!important;
     }
-    label[for=message] {
-        position: relative;
+    .message-container {
+        align-self: center;
+    }
+    #message {
+        min-width: 200px;
+    }
+    input {
+        min-width: 200px;
+    }
+    .Fields {
+        align-self: center;
+        margin-top: 10px;
+    }
+    .btn {
+        margin-left: 0px;
+        display: flex;
+        justify-content: space-around;
     }
 
 }

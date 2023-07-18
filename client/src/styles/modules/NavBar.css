@@ -26,6 +26,8 @@
     .nav-container ul{
         flex-direction: column;
         align-items: center;
+        margin-block-start: 0em;
+        padding-inline-start: 0px;
     }
     .nav-item {
         opacity: 0%;
