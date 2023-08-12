@@ -52,11 +52,11 @@ class ProjectsComponent extends React.Component<unknown, unknown> {
             <>
                 <title>Projets</title>
                 <div className="carousel1">
+                    <ProjectsItem desc="Minuteur permet de consulter le nombre de jours restant avant la fin ou le début des vacances" img={"minuteur"} />
                     <ProjectsItem
                         desc="Cleather permet de consulter la météo et la température d'une ville"
                         img={"cleather"}
                     />
-                    <ProjectsItem desc="Ce portolio" img={"portfolio"} />
                 </div>
             </>
         );

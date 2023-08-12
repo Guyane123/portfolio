@@ -92,14 +92,19 @@ class carousel {
         const carousel = this.createDivWithClassName("carousel");
         const nextArrow = this.createDivWithClassName("next-arrow");
         const prevArrow = this.createDivWithClassName("prev-arrow");
-
-        prevArrow.innerText = "<";
-        nextArrow.innerText = ">";
+        const prevArrowSpan = document.createElement('span')
+        const nextArrowSpan = document.createElement('span')
+        prevArrowSpan.setAttribute("class", "material-symbols-outlined")
+        nextArrowSpan.setAttribute("class", "material-symbols-outlined")
+        prevArrowSpan.innerText = "chevron_left";
+        nextArrowSpan.innerText = "chevron_right";
+        prevArrow.appendChild(prevArrowSpan)
+        nextArrow.appendChild(nextArrowSpan)
         nextArrow.addEventListener("click", this.next);
         prevArrow.addEventListener("click", this.prev);
 
-        nextArrow.addEventListener("touchstart", this.next);
-        prevArrow.addEventListener("touchstart", this.prev);
+        nextArrow.addEventListener("touchend", this.next);
+        prevArrow.addEventListener("touchend", this.prev);
 
         carousel.appendChild(prevArrow);
         carousel.appendChild(nextArrow);

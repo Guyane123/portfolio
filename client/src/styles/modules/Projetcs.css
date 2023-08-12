@@ -58,10 +58,10 @@
 }
 
 .prev-arrow{
-    left: 0px;
+    left: 10px;
 }
 .next-arrow{
-    right: 0px;
+    right: 10px;
 }
 .prev-arrow:hover, .next-arrow:hover {
     cursor: pointer;
@@ -80,4 +80,7 @@
 }
 .portfolio {
     background-image: url(../../assets/Cleather.png);
+}
+.minuteur {
+    background-image: url(../../assets/Minuteur.png);
 }

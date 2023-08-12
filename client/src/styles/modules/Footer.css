@@ -1,0 +1,29 @@
+footer {
+    height: 100px;
+    background-color: rgb(49, 53, 82);
+    margin-left: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+    position: absolute;
+    width: 100%;
+    margin-top: 100px;
+}
+footer a {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    color: rgba(252, 252, 252, 0.3);
+    text-decoration: underline;
+    transition: none;
+}
+footer a:hover {
+    color: rgba(252, 252, 252, 0.3)!important;
+}
+
+@media only screen and (max-width: 800px) {
+    footer {
+        margin-top: 100px;
+        margin-left: -10px;
+    }
+}
